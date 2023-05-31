@@ -18,8 +18,9 @@ jobs:
       - name: Execute Gradle build
         run: ./gradlew build
 
-      - uses: s0/git-publish-subdir-action@develop
-        env:
-          REPO: self
-          BRANCH: deploy
-          FOLDER: build
+      - name: Push commit
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          branch: "deploy"
+          force: true
