@@ -1,8 +1,7 @@
 name: build and push code
 on:
   pull_request:
-    branches:
-      - ci_test
+    branches: ["ci_test"]
 jobs:
   git-push:
     name: build and push
