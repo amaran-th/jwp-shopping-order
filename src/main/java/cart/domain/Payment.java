@@ -20,7 +20,6 @@ public class Payment {
         this(null, originalTotalPrice, discountAmount, deliveryFee);
     }
 
-
     public static Payment of(Order order, List<DiscountPolicy> discountPolicies, DeliveryPolicy deliveryPolicy) {
         Money originalTotalPrice = order.calculateOriginalTotalPrice();
         Money discountAmount = discountPolicies.stream()
@@ -28,5 +27,21 @@ public class Payment {
                 .reduce(Money.from(0), Money::add);
         Money deliveryFee = deliveryPolicy.calculateDeliveryFee(order);
         return new Payment(null, originalTotalPrice, discountAmount, deliveryFee);
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Money getOriginalTotalPrice() {
+        return originalTotalPrice;
+    }
+
+    public Money getDiscountAmount() {
+        return discountAmount;
+    }
+
+    public Money getDeliveryFee() {
+        return deliveryFee;
     }
 }

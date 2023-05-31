@@ -22,4 +22,16 @@ public class Order {
                 .map(OrderItem::getOrderPrice)
                 .reduce(new Money(0), Money::add);
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Member getMember() {
+        return member;
+    }
+
+    public List<OrderItem> getOrderItems() {
+        return orderItems;
+    }
 }
