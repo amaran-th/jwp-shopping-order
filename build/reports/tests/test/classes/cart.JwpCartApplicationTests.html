@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - JwpCartApplicationTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>JwpCartApplicationTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/cart.html">cart</a> &gt; JwpCartApplicationTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.003s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">contextLoads()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2023-06-01 12:28:16.344  INFO 1900 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [cart.JwpCartApplicationTests], using SpringBootContextLoader
+2023-06-01 12:28:16.345  INFO 1900 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [cart.JwpCartApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-06-01 12:28:16.345  INFO 1900 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [cart.JwpCartApplicationTests]: JwpCartApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-06-01 12:28:16.348  INFO 1900 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration cart.JwpCartApplication for test class cart.JwpCartApplicationTests
+2023-06-01 12:28:16.349  INFO 1900 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-06-01 12:28:16.349  INFO 1900 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@47e433e8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@590fbfb2, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7f4f1822, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@409f1db0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@26021d38, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2d4d465, org.springframework.test.context.transaction.TransactionalTestExecutionListener@55d4215, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3d97bd93, org.springframework.test.context.event.EventPublishingTestExecutionListener@bca8cc4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2f991624, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@40bba428, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4040e289, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1f33eae9, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@787ce71d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@65fb86de]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.9)
+
+2023-06-01 12:28:16.368  INFO 1900 --- [    Test worker] cart.JwpCartApplicationTests             : Starting JwpCartApplicationTests using Java 11.0.19 on fv-az618-640 with PID 1900 (started by runner in /home/runner/work/jwp-shopping-order/jwp-shopping-order)
+2023-06-01 12:28:16.368  INFO 1900 --- [    Test worker] cart.JwpCartApplicationTests             : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-06-01 12:28:16.548  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2023-06-01 12:28:16.550  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2023-06-01 12:28:16.842  INFO 1900 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-01 12:28:16.862  INFO 1900 --- [    Test worker] cart.JwpCartApplicationTests             : Started JwpCartApplicationTests in 0.508 seconds (JVM running for 18.161)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.8.1</a> at Jun 1, 2023, 12:28:17 PM</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ curl 'http://localhost:33965/products/4' -i -X DELETE
+----

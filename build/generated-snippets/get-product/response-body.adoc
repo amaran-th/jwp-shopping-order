@@ -1,0 +1,9 @@
+[source,options="nowrap"]
+----
+{
+  "id" : 4,
+  "name" : "피자",
+  "price" : 15000,
+  "imageUrl" : "http://example.com/pizza.jpg"
+}
+----

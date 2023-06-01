@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ProductIntegrationTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ProductIntegrationTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/cart.integration.html">cart.integration</a> &gt; ProductIntegrationTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">5</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">3.339s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">createProduct()</td>
+<td class="success">0.683s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteProduct()</td>
+<td class="success">0.696s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getCreatedProduct()</td>
+<td class="success">0.645s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getProducts()</td>
+<td class="success">0.624s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">updateProduct()</td>
+<td class="success">0.691s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2023-06-01 12:28:12.990  INFO 1900 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [cart.integration.ProductIntegrationTest], using SpringBootContextLoader
+2023-06-01 12:28:12.990  INFO 1900 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [cart.integration.ProductIntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-06-01 12:28:12.990  INFO 1900 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [cart.integration.ProductIntegrationTest]: ProductIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-06-01 12:28:12.991  INFO 1900 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration cart.JwpCartApplication for test class cart.integration.ProductIntegrationTest
+2023-06-01 12:28:12.992  INFO 1900 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-06-01 12:28:12.993  INFO 1900 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@38156b93, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@52e149ae, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@562dae75, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1915be63, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@a4f1721, org.springframework.test.context.support.DirtiesContextTestExecutionListener@52bb93ff, org.springframework.test.context.transaction.TransactionalTestExecutionListener@695ed1db, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5d8c9c35, org.springframework.test.context.event.EventPublishingTestExecutionListener@2f887eba, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@21a224df, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3eede939, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7b9b7e5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6b286406, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5b1c2160, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@ae9af1b]
+2023-06-01 12:28:12.998  INFO 1900 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-01 12:28:12.998  INFO 1900 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-01 12:28:13.002  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2023-06-01 12:28:13.005  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.9)
+
+2023-06-01 12:28:13.022  INFO 1900 --- [    Test worker] cart.integration.ProductIntegrationTest  : Starting ProductIntegrationTest using Java 11.0.19 on fv-az618-640 with PID 1900 (started by runner in /home/runner/work/jwp-shopping-order/jwp-shopping-order)
+2023-06-01 12:28:13.022  INFO 1900 --- [    Test worker] cart.integration.ProductIntegrationTest  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-06-01 12:28:13.229  INFO 1900 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-01 12:28:13.234  INFO 1900 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-01 12:28:13.235  INFO 1900 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-06-01 12:28:13.242  INFO 1900 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-01 12:28:13.242  INFO 1900 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 218 ms
+2023-06-01 12:28:13.336  INFO 1900 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2023-06-01 12:28:13.348  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2023-06-01 12:28:13.350  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2023-06-01 12:28:13.583  INFO 1900 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-01 12:28:13.612  INFO 1900 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 33819 (http) with context path ''
+2023-06-01 12:28:13.617  INFO 1900 --- [    Test worker] cart.integration.ProductIntegrationTest  : Started ProductIntegrationTest in 0.611 seconds (JVM running for 14.916)
+2023-06-01 12:28:13.632  INFO 1900 --- [o-auto-9-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-01 12:28:13.635  INFO 1900 --- [o-auto-9-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-01 12:28:13.637  INFO 1900 --- [o-auto-9-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-01 12:28:13.641 DEBUG 1900 --- [o-auto-9-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-01 12:28:13.642 DEBUG 1900 --- [o-auto-9-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-01 12:28:13.643 TRACE 1900 --- [o-auto-9-exec-1] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 73
+host: localhost:33819
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.19)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Thu, 01 Jun 2023 12:28:12 GMT
+Location: /products/4
+
+
+
+
+Request method:	PUT
+Request URI:	http://localhost:33819/products/4
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;name&quot;: &quot;새로운 피자&quot;,
+    &quot;price&quot;: 15000,
+    &quot;imageUrl&quot;: &quot;http://example.com/pizza.jpg&quot;
+}
+2023-06-01 12:28:13.677 DEBUG 1900 --- [o-auto-9-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2023-06-01 12:28:13.677 DEBUG 1900 --- [o-auto-9-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [UPDATE product SET name = ?, price = ?, image_url = ? WHERE id = ?]
+2023-06-01 12:28:13.678 TRACE 1900 --- [o-auto-9-exec-2] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [새로운 피자], value class [java.lang.String], SQL type unknown
+2023-06-01 12:28:13.678 TRACE 1900 --- [o-auto-9-exec-2] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [15000], value class [java.lang.Integer], SQL type unknown
+2023-06-01 12:28:13.678 TRACE 1900 --- [o-auto-9-exec-2] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 3, parameter value [http://example.com/pizza.jpg], value class [java.lang.String], SQL type unknown
+2023-06-01 12:28:13.678 TRACE 1900 --- [o-auto-9-exec-2] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 4, parameter value [4], value class [java.lang.Long], SQL type unknown
+2023-06-01 12:28:13.678 TRACE 1900 --- [o-auto-9-exec-2] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows
+
+###### HTTP Request ######
+PUT /products/4 HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 83
+host: localhost:33819
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.19)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 200 OK
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Thu, 01 Jun 2023 12:28:12 GMT
+
+
+
+
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Length: 0
+Date: Thu, 01 Jun 2023 12:28:12 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+2023-06-01 12:28:13.690  INFO 1900 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-01 12:28:13.690  INFO 1900 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-01 12:28:13.695  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2023-06-01 12:28:13.700  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.9)
+
+2023-06-01 12:28:13.721  INFO 1900 --- [    Test worker] cart.integration.ProductIntegrationTest  : Starting ProductIntegrationTest using Java 11.0.19 on fv-az618-640 with PID 1900 (started by runner in /home/runner/work/jwp-shopping-order/jwp-shopping-order)
+2023-06-01 12:28:13.721  INFO 1900 --- [    Test worker] cart.integration.ProductIntegrationTest  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-06-01 12:28:13.931  INFO 1900 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-01 12:28:13.932  INFO 1900 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-01 12:28:13.933  INFO 1900 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-06-01 12:28:13.941  INFO 1900 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-01 12:28:13.942  INFO 1900 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 220 ms
+2023-06-01 12:28:14.026  INFO 1900 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2023-06-01 12:28:14.034  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2023-06-01 12:28:14.036  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2023-06-01 12:28:14.301  INFO 1900 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-01 12:28:14.328  INFO 1900 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 33965 (http) with context path ''
+2023-06-01 12:28:14.332  INFO 1900 --- [    Test worker] cart.integration.ProductIntegrationTest  : Started ProductIntegrationTest in 0.631 seconds (JVM running for 15.632)
+2023-06-01 12:28:14.353  INFO 1900 --- [-auto-10-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-01 12:28:14.353  INFO 1900 --- [-auto-10-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-01 12:28:14.354  INFO 1900 --- [-auto-10-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-01 12:28:14.356 DEBUG 1900 --- [-auto-10-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-01 12:28:14.357 DEBUG 1900 --- [-auto-10-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-01 12:28:14.358 TRACE 1900 --- [-auto-10-exec-1] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 73
+host: localhost:33965
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.19)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Thu, 01 Jun 2023 12:28:14 GMT
+Location: /products/4
+
+
+
+
+Request method:	DELETE
+Request URI:	http://localhost:33965/products/4
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+2023-06-01 12:28:14.372 DEBUG 1900 --- [-auto-10-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2023-06-01 12:28:14.372 DEBUG 1900 --- [-auto-10-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [DELETE FROM product WHERE id = ?]
+2023-06-01 12:28:14.372 TRACE 1900 --- [-auto-10-exec-2] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [4], value class [java.lang.Long], SQL type unknown
+2023-06-01 12:28:14.372 TRACE 1900 --- [-auto-10-exec-2] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows
+
+###### HTTP Request ######
+DELETE /products/4 HTTP/1.1
+accept: */*
+host: localhost:33965
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.19)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 204 No Content
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Date: Thu, 01 Jun 2023 12:28:14 GMT
+
+
+
+
+2023-06-01 12:28:14.387  INFO 1900 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-01 12:28:14.387  INFO 1900 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-01 12:28:14.393  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2023-06-01 12:28:14.396  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.9)
+
+2023-06-01 12:28:14.424  INFO 1900 --- [    Test worker] cart.integration.ProductIntegrationTest  : Starting ProductIntegrationTest using Java 11.0.19 on fv-az618-640 with PID 1900 (started by runner in /home/runner/work/jwp-shopping-order/jwp-shopping-order)
+2023-06-01 12:28:14.425  INFO 1900 --- [    Test worker] cart.integration.ProductIntegrationTest  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-06-01 12:28:14.598  INFO 1900 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-01 12:28:14.600  INFO 1900 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-01 12:28:14.600  INFO 1900 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-06-01 12:28:14.607  INFO 1900 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-01 12:28:14.607  INFO 1900 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 182 ms
+2023-06-01 12:28:14.700  INFO 1900 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2023-06-01 12:28:14.707  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2023-06-01 12:28:14.711  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2023-06-01 12:28:14.942  INFO 1900 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-01 12:28:14.968  INFO 1900 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 46573 (http) with context path ''
+2023-06-01 12:28:14.972  INFO 1900 --- [    Test worker] cart.integration.ProductIntegrationTest  : Started ProductIntegrationTest in 0.574 seconds (JVM running for 16.272)
+2023-06-01 12:28:14.984  INFO 1900 --- [-auto-11-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-01 12:28:14.985  INFO 1900 --- [-auto-11-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-01 12:28:14.985  INFO 1900 --- [-auto-11-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-06-01 12:28:14.987 DEBUG 1900 --- [-auto-11-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-01 12:28:14.987 DEBUG 1900 --- [-auto-11-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-01 12:28:14.988 TRACE 1900 --- [-auto-11-exec-1] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 73
+host: localhost:46573
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.19)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Thu, 01 Jun 2023 12:28:14 GMT
+Location: /products/4
+
+
+
+
+Request method:	GET
+Request URI:	http://localhost:46573/products/4
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+2023-06-01 12:28:15.000 DEBUG 1900 --- [-auto-11-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-01 12:28:15.000 DEBUG 1900 --- [-auto-11-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM product WHERE id = ?]
+2023-06-01 12:28:15.000 TRACE 1900 --- [-auto-11-exec-2] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [4], value class [java.lang.Long], SQL type unknown
+
+###### HTTP Request ######
+GET /products/4 HTTP/1.1
+accept: */*
+host: localhost:46573
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.19)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Date: Thu, 01 Jun 2023 12:28:14 GMT
+Content-Type: application/json
+
+
+
+
+2023-06-01 12:28:15.033  INFO 1900 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-01 12:28:15.033  INFO 1900 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-01 12:28:15.038  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2023-06-01 12:28:15.040  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.9)
+
+2023-06-01 12:28:15.053  INFO 1900 --- [    Test worker] cart.integration.ProductIntegrationTest  : Starting ProductIntegrationTest using Java 11.0.19 on fv-az618-640 with PID 1900 (started by runner in /home/runner/work/jwp-shopping-order/jwp-shopping-order)
+2023-06-01 12:28:15.053  INFO 1900 --- [    Test worker] cart.integration.ProductIntegrationTest  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-06-01 12:28:15.248  INFO 1900 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-01 12:28:15.249  INFO 1900 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-01 12:28:15.249  INFO 1900 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-06-01 12:28:15.256  INFO 1900 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-01 12:28:15.256  INFO 1900 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 203 ms
+2023-06-01 12:28:15.335  INFO 1900 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2023-06-01 12:28:15.345  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2023-06-01 12:28:15.346  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2023-06-01 12:28:15.572  INFO 1900 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-01 12:28:15.602  INFO 1900 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 33997 (http) with context path ''
+2023-06-01 12:28:15.606  INFO 1900 --- [    Test worker] cart.integration.ProductIntegrationTest  : Started ProductIntegrationTest in 0.565 seconds (JVM running for 16.905)
+2023-06-01 12:28:15.618  INFO 1900 --- [-auto-12-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-01 12:28:15.618  INFO 1900 --- [-auto-12-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-01 12:28:15.619  INFO 1900 --- [-auto-12-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-01 12:28:15.620 DEBUG 1900 --- [-auto-12-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing SQL query [SELECT * FROM product]
+
+###### HTTP Request ######
+GET /products HTTP/1.1
+content-type: application/json
+accept: */*
+host: localhost:33997
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.19)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Date: Thu, 01 Jun 2023 12:28:15 GMT
+Content-Type: application/json
+
+
+
+
+2023-06-01 12:28:15.657  INFO 1900 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-01 12:28:15.658  INFO 1900 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-01 12:28:15.663  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2023-06-01 12:28:15.667  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.9)
+
+2023-06-01 12:28:15.685  INFO 1900 --- [    Test worker] cart.integration.ProductIntegrationTest  : Starting ProductIntegrationTest using Java 11.0.19 on fv-az618-640 with PID 1900 (started by runner in /home/runner/work/jwp-shopping-order/jwp-shopping-order)
+2023-06-01 12:28:15.685  INFO 1900 --- [    Test worker] cart.integration.ProductIntegrationTest  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-06-01 12:28:15.871  INFO 1900 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-01 12:28:15.872  INFO 1900 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-01 12:28:15.872  INFO 1900 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-06-01 12:28:15.880  INFO 1900 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-01 12:28:15.880  INFO 1900 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 194 ms
+2023-06-01 12:28:15.967  INFO 1900 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2023-06-01 12:28:15.975  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2023-06-01 12:28:15.981  INFO 1900 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2023-06-01 12:28:16.259  INFO 1900 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-01 12:28:16.291  INFO 1900 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 46879 (http) with context path ''
+2023-06-01 12:28:16.295  INFO 1900 --- [    Test worker] cart.integration.ProductIntegrationTest  : Started ProductIntegrationTest in 0.627 seconds (JVM running for 17.595)
+2023-06-01 12:28:16.313  INFO 1900 --- [-auto-13-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-01 12:28:16.313  INFO 1900 --- [-auto-13-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-01 12:28:16.314  INFO 1900 --- [-auto-13-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-01 12:28:16.317 DEBUG 1900 --- [-auto-13-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-01 12:28:16.318 DEBUG 1900 --- [-auto-13-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-01 12:28:16.320 TRACE 1900 --- [-auto-13-exec-1] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 75
+host: localhost:46879
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.19)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Thu, 01 Jun 2023 12:28:15 GMT
+Location: /products/4
+
+
+
+
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.8.1</a> at Jun 1, 2023, 12:28:17 PM</p>
+</div>
+</div>
+</body>
+</html>

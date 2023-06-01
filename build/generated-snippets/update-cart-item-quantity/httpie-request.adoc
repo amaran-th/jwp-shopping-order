@@ -1,0 +1,7 @@
+[source,bash]
+----
+$ echo '{
+  "quantity" : 0
+}' | http --auth 'a@a.com:1234' PATCH 'http://localhost:46555/cart-items/4' \
+    'Content-Type:application/json'
+----

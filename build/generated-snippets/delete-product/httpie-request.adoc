@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ http DELETE 'http://localhost:33965/products/4'
+----

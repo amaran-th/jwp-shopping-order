@@ -1,0 +1,8 @@
+[source,bash]
+----
+$ curl 'http://localhost:46555/cart-items/4' -i -u 'a@a.com:1234' -X PATCH \
+    -H 'Content-Type: application/json' \
+    -d '{
+  "quantity" : 0
+}'
+----

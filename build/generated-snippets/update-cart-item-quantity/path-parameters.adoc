@@ -1,0 +1,8 @@
+.+/cart-items/{cartItemId}+
+|===
+|Parameter|Description
+
+|`+cartItemId+`
+|수량을 변경할 장바구니 상품 id
+
+|===
