@@ -23,6 +23,9 @@ jobs:
         with:
           clean: false
           ref: "deploy"
+      - name: Remove Files without Jar
+        run: rm -rf *
+        working-directory: .
       - name: Add & Commit
         uses: EndBug/add-and-commit@v4.4.0
         with:
@@ -35,5 +38,4 @@ jobs:
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
           branch: "deploy"
-          directory: "build/libs"
           force: true
