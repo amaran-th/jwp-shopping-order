@@ -24,7 +24,7 @@ jobs:
           clean: false
           ref: "deploy"
       - name: Remove Files without Jar
-        run: find ./* -name 'build/libs' -prune -o -exec rm -rf {} \; -prune
+        run: find * -name 'build/libs' -prune -o -exec rm -rf {} \; -prune
         working-directory: .
       - name: Add & Commit
         uses: EndBug/add-and-commit@v4.4.0
