@@ -1,9 +1,0 @@
-[source,bash]
-----
-$ echo '{
-  "name" : "새로운 피자",
-  "price" : 15000,
-  "imageUrl" : "http://example.com/pizza.jpg"
-}' | http PUT 'http://localhost:33819/products/4' \
-    'Content-Type:application/json'
-----

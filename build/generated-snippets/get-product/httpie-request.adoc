@@ -1,4 +1,0 @@
-[source,bash]
-----
-$ http GET 'http://localhost:46573/products/4'
-----

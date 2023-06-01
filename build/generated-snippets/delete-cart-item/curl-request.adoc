@@ -1,5 +1,0 @@
-[source,bash]
-----
-$ curl 'http://localhost:39333/cart-items/4' -i -u 'a@a.com:1234' -X DELETE \
-    -H 'Content-Type: application/json'
-----

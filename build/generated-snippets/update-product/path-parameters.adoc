@@ -1,8 +1,0 @@
-.+/products/{productId}+
-|===
-|Parameter|Description
-
-|`+productId+`
-|수정할 상품 id
-
-|===
