@@ -22,7 +22,7 @@ jobs:
       - name: Stash changes
         run: |
           ls build/libs
-          git add build/libs/jwp-shopping-order.jar
+          git add build/libs/*
           git stash push -- "build/libs/*"
 
       - name: Checkout Repository
@@ -37,7 +37,7 @@ jobs:
           ls
           git stash list
       - name: Apply stashed changes
-        run: git stash apply --index
+        run: git stash apply
       - name: Push Changes to Another Branch
         uses: ad-m/github-push-action@master
         with:
