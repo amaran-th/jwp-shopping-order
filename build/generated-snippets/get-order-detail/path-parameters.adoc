@@ -1,8 +1,0 @@
-.+/orders/{orderId}+
-|===
-|Parameter|Description
-
-|`+orderId+`
-|주문 id
-
-|===

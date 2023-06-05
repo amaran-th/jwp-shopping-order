@@ -1,6 +1,0 @@
-[source,http,options="nowrap"]
-----
-DELETE /products/4 HTTP/1.1
-Host: localhost:60062
-
-----

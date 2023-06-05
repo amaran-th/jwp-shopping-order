@@ -1,8 +1,0 @@
-|===
-|Path|Type|Description
-
-|`+cartItemIds+`
-|`+Array+`
-|주문할 장바구니 항목들의 id 리스트
-
-|===

@@ -1,7 +1,0 @@
-[source,bash]
-----
-$ echo '{
-  "cartItemIds" : [ 4, 5, 6 ]
-}' | http --auth 'a@a.com:1234' POST 'http://localhost:59753/orders' \
-    'Content-Type:application/json'
-----

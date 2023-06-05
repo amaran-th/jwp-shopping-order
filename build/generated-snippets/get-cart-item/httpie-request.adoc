@@ -1,5 +1,0 @@
-[source,bash]
-----
-$ http --auth 'a@a.com:1234' GET 'http://localhost:60045/cart-items' \
-    'Content-Type:application/json'
-----

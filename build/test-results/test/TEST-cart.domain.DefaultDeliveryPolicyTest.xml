@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cart.domain.DefaultDeliveryPolicyTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-04T10:48:36" hostname="LAPTOP-4RK3SJ4F" time="0.001">
-  <properties/>
-  <testcase name="calculateDeliveryFee()을 호출하면 3500의 값을 가진 Money가 반환된다." classname="cart.domain.DefaultDeliveryPolicyTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

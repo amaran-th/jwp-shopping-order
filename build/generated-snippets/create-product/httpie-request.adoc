@@ -1,9 +1,0 @@
-[source,bash]
-----
-$ echo '{
-  "name" : "ġŲ",
-  "price" : 10000,
-  "imageUrl" : "http://example.com/chicken.jpg"
-}' | http POST 'http://localhost:60082/products' \
-    'Content-Type:application/json'
-----

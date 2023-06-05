@@ -1,5 +1,0 @@
-[source,bash]
-----
-$ curl 'http://localhost:60075/products' -i -X GET \
-    -H 'Content-Type: application/json'
-----

@@ -1,8 +1,0 @@
-[source,bash]
-----
-$ curl 'http://localhost:59753/orders' -i -u 'a@a.com:1234' -X POST \
-    -H 'Content-Type: application/json' \
-    -d '{
-  "cartItemIds" : [ 4, 5, 6 ]
-}'
-----

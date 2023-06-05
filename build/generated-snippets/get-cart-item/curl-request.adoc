@@ -1,5 +1,0 @@
-[source,bash]
-----
-$ curl 'http://localhost:60045/cart-items' -i -u 'a@a.com:1234' -X GET \
-    -H 'Content-Type: application/json'
-----

@@ -1,8 +1,0 @@
-.+/cart-items/{cartItemId}+
-|===
-|Parameter|Description
-
-|`+cartItemId+`
-|삭제할 장바구니 상품 id
-
-|===

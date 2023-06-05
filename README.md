@@ -1,3 +1,0 @@
-# jwp-shopping-order
-
-test
