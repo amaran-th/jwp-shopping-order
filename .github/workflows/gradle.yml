@@ -19,12 +19,17 @@ jobs:
         run: |
           chmod +x gradlew
           ./gradlew bootJar
+      - name: Stash changes
+        run: git stash
+
       - name: Checkout Repository
-        uses: actions/checkout@v2.4.2
+        uses: actions/checkout@v2
         with:
           ref: 'deploy'
           clean: false
           fetch-depth: 0
+      - name: Apply stashed changes
+        run: git stash apply
       - name: Push Changes to Another Branch
         uses: ad-m/github-push-action@master
         with:
