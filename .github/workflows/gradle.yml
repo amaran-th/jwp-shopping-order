@@ -37,7 +37,9 @@ jobs:
           ls
           git stash list
       - name: Apply stashed changes
-        run: git stash apply
+        run: |
+          git ls-files --stage build/libs
+          git stash apply --index
       - name: Push Changes to Another Branch
         uses: ad-m/github-push-action@master
         with:
