@@ -29,9 +29,12 @@ jobs:
           clean: false
           fetch-depth: 0
       - name: Remove file
-        run: rm -rf build
+        run: |
+          rm -rf build
+          ls
+          git stash list
       - name: Apply stashed changes
-        run: git stash apply
+        run: git stash apply --index
       - name: Push Changes to Another Branch
         uses: ad-m/github-push-action@master
         with:
