@@ -21,7 +21,9 @@ jobs:
           ./gradlew bootJar
       - name: Checkout Repository
         uses: actions/checkout@v2
-
+        with:
+          ref: 'deploy'
+          fetch-depth: 0
       - name: Push Changes to Another Branch
         uses: ad-m/github-push-action@master
         with:
