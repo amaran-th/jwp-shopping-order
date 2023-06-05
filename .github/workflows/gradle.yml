@@ -22,6 +22,7 @@ jobs:
       - name: Stash changes
         run: |
           ls build/libs
+          git add build/libs/jwp-shopping-order.jar
           git stash push -- "build/libs/*"
 
       - name: Checkout Repository
