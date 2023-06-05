@@ -20,7 +20,7 @@ jobs:
           chmod +x gradlew
           ./gradlew bootJar
       - name: Stash changes
-        run: git stash
+        run: git stash push -- "build/libs"
 
       - name: Checkout Repository
         uses: actions/checkout@v2
