@@ -1,0 +1,28 @@
+|===
+|Path|Type|Description
+
+|`+originalPrice+`
+|`+Number+`
+|주문 금액
+
+|`+discounts[].discountPolicy+`
+|`+String+`
+|적용된 할인 정책 이름
+
+|`+discounts[].discountAmount+`
+|`+Number+`
+|할인 금액
+
+|`+discountedPrice+`
+|`+Number+`
+|할인 적용 금액
+
+|`+deliveryFee+`
+|`+Number+`
+|배송비
+
+|`+finalPrice+`
+|`+Number+`
+|예상 결제 금액
+
+|===

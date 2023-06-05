@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - PaymentServiceTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>PaymentServiceTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/cart.application.html">cart.application</a> &gt; PaymentServiceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.053s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Order 객체를 받아서 Payment 생성할 수 있다.</td>
+<td class="success">createDraftPaymentRecord()</td>
+<td class="success">0.012s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Order 객체를 받아서 PaymentRecord 생성하고 저장한다.</td>
+<td class="success">createPaymentRecordAndSave()</td>
+<td class="success">0.017s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Order로 PaymentRecord를 찾아 반환한다.</td>
+<td class="success">findPaymentRecordByOrder()</td>
+<td class="success">0.024s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2023-06-04 19:48:36.705  INFO 5552 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [cart.application.PaymentServiceTest], using SpringBootContextLoader
+2023-06-04 19:48:36.706  INFO 5552 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [cart.application.PaymentServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-06-04 19:48:36.706  INFO 5552 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [cart.application.PaymentServiceTest]: PaymentServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-06-04 19:48:36.710  INFO 5552 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration cart.JwpCartApplication for test class cart.application.PaymentServiceTest
+2023-06-04 19:48:36.712  INFO 5552 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-06-04 19:48:36.712  INFO 5552 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@67316b6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@63df3d76, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5d984f52, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@745e99ef, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6a86e774, org.springframework.test.context.support.DirtiesContextTestExecutionListener@70a843df, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6fd56047, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6f441db3, org.springframework.test.context.event.EventPublishingTestExecutionListener@3224ea68, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@20f148, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@44337e53, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@bd54ae3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1e37865b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@199a9e64, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4604bae2]
+2023-06-04 19:48:36.716  INFO 5552 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@8a4fa18 testClass = PaymentServiceTest, testInstance = cart.application.PaymentServiceTest@6b148244, testMethod = createDraftPaymentRecord@PaymentServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@37fbc64f testClass = PaymentServiceTest, locations = '{}', classes = '{class cart.JwpCartApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@22c7ccab, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@61fe294f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@74b0337f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2e230d4c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@244c244e, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@6a85b204], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.jdbc.support.JdbcTransactionManager@1c8b6ee4]; rollback [true]
+2023-06-04 19:48:36.718 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : The following parameters are used for call INSERT INTO order_record (MEMBER_ID, ORDER_TIME) VALUES(?, ?) with: [1, 2023-06-04 19:48:36.7173817]
+2023-06-04 19:48:36.718 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:36.718 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:36.718 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Using generated keys support with array of column names.
+2023-06-04 19:48:36.718 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.718 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [2023-06-04 19:48:36.7173817], value class [java.sql.Timestamp], SQL type 93
+2023-06-04 19:48:36.718 TRACE 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+2023-06-04 19:48:36.718 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : The following parameters are used for call INSERT INTO order_item (NAME, IMAGE_URL, QUANTITY, TOTAL_PRICE, ORDER_ID) VALUES(?, ?, ?, ?, ?) with: [치킨, http://example.com/chicken.jpg, 1, 10000, 5]
+2023-06-04 19:48:36.718 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:36.719 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:36.719 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Using generated keys support with array of column names.
+2023-06-04 19:48:36.719 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [치킨], value class [java.lang.String], SQL type 12
+2023-06-04 19:48:36.719 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [http://example.com/chicken.jpg], value class [java.lang.String], SQL type 12
+2023-06-04 19:48:36.719 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 3, parameter value [1], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.719 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 4, parameter value [10000], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.719 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 5, parameter value [5], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.719 TRACE 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+2023-06-04 19:48:36.719 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : The following parameters are used for call INSERT INTO order_item (NAME, IMAGE_URL, QUANTITY, TOTAL_PRICE, ORDER_ID) VALUES(?, ?, ?, ?, ?) with: [피자, http://example.com/pizza.jpg, 2, 30000, 5]
+2023-06-04 19:48:36.720 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:36.720 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:36.720 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Using generated keys support with array of column names.
+2023-06-04 19:48:36.720 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [피자], value class [java.lang.String], SQL type 12
+2023-06-04 19:48:36.720 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [http://example.com/pizza.jpg], value class [java.lang.String], SQL type 12
+2023-06-04 19:48:36.720 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 3, parameter value [2], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.720 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 4, parameter value [30000], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.720 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 5, parameter value [5], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.720 TRACE 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+2023-06-04 19:48:36.720 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : The following parameters are used for call INSERT INTO order_item (NAME, IMAGE_URL, QUANTITY, TOTAL_PRICE, ORDER_ID) VALUES(?, ?, ?, ?, ?) with: [보쌈, http://example.com/pizza.jpg, 1, 15000, 5]
+2023-06-04 19:48:36.720 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:36.720 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:36.720 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Using generated keys support with array of column names.
+2023-06-04 19:48:36.720 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [보쌈], value class [java.lang.String], SQL type 12
+2023-06-04 19:48:36.720 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [http://example.com/pizza.jpg], value class [java.lang.String], SQL type 12
+2023-06-04 19:48:36.720 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 3, parameter value [1], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.720 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 4, parameter value [15000], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.720 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 5, parameter value [5], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.721 TRACE 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+2023-06-04 19:48:36.721 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:36.721 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM order_record WHERE id = ?]
+2023-06-04 19:48:36.721 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [5], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:36.721 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:36.721 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE id = ?]
+2023-06-04 19:48:36.721 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:36.721 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:36.722 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM order_item WHERE order_id = ?]
+2023-06-04 19:48:36.722 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [5], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:36.723 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL query [SELECT * FROM default_discount_policy]
+2023-06-04 19:48:36.723 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL query [SELECT * FROM default_delivery_policy]
+2023-06-04 19:48:36.728  INFO 5552 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@8a4fa18 testClass = PaymentServiceTest, testInstance = cart.application.PaymentServiceTest@6b148244, testMethod = createDraftPaymentRecord@PaymentServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@37fbc64f testClass = PaymentServiceTest, locations = '{}', classes = '{class cart.JwpCartApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@22c7ccab, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@61fe294f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@74b0337f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2e230d4c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@244c244e, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@6a85b204], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+2023-06-04 19:48:36.731  INFO 5552 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@8a4fa18 testClass = PaymentServiceTest, testInstance = cart.application.PaymentServiceTest@f0ad7ff, testMethod = findPaymentRecordByOrder@PaymentServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@37fbc64f testClass = PaymentServiceTest, locations = '{}', classes = '{class cart.JwpCartApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@22c7ccab, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@61fe294f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@74b0337f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2e230d4c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@244c244e, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@6a85b204], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.jdbc.support.JdbcTransactionManager@1c8b6ee4]; rollback [true]
+2023-06-04 19:48:36.732 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : The following parameters are used for call INSERT INTO order_record (MEMBER_ID, ORDER_TIME) VALUES(?, ?) with: [1, 2023-06-04 19:48:36.7323846]
+2023-06-04 19:48:36.732 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:36.732 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:36.732 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Using generated keys support with array of column names.
+2023-06-04 19:48:36.732 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.732 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [2023-06-04 19:48:36.7323846], value class [java.sql.Timestamp], SQL type 93
+2023-06-04 19:48:36.733 TRACE 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+2023-06-04 19:48:36.733 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : The following parameters are used for call INSERT INTO order_item (NAME, IMAGE_URL, QUANTITY, TOTAL_PRICE, ORDER_ID) VALUES(?, ?, ?, ?, ?) with: [치킨, http://example.com/chicken.jpg, 1, 10000, 6]
+2023-06-04 19:48:36.733 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:36.733 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:36.733 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Using generated keys support with array of column names.
+2023-06-04 19:48:36.733 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [치킨], value class [java.lang.String], SQL type 12
+2023-06-04 19:48:36.733 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [http://example.com/chicken.jpg], value class [java.lang.String], SQL type 12
+2023-06-04 19:48:36.733 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 3, parameter value [1], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.733 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 4, parameter value [10000], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.733 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 5, parameter value [6], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.734 TRACE 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+2023-06-04 19:48:36.734 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : The following parameters are used for call INSERT INTO order_item (NAME, IMAGE_URL, QUANTITY, TOTAL_PRICE, ORDER_ID) VALUES(?, ?, ?, ?, ?) with: [피자, http://example.com/pizza.jpg, 2, 30000, 6]
+2023-06-04 19:48:36.734 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:36.734 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:36.734 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Using generated keys support with array of column names.
+2023-06-04 19:48:36.734 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [피자], value class [java.lang.String], SQL type 12
+2023-06-04 19:48:36.734 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [http://example.com/pizza.jpg], value class [java.lang.String], SQL type 12
+2023-06-04 19:48:36.734 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 3, parameter value [2], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.734 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 4, parameter value [30000], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.734 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 5, parameter value [6], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.735 TRACE 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+2023-06-04 19:48:36.735 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : The following parameters are used for call INSERT INTO order_item (NAME, IMAGE_URL, QUANTITY, TOTAL_PRICE, ORDER_ID) VALUES(?, ?, ?, ?, ?) with: [보쌈, http://example.com/pizza.jpg, 1, 15000, 6]
+2023-06-04 19:48:36.735 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:36.735 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:36.735 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Using generated keys support with array of column names.
+2023-06-04 19:48:36.735 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [보쌈], value class [java.lang.String], SQL type 12
+2023-06-04 19:48:36.735 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [http://example.com/pizza.jpg], value class [java.lang.String], SQL type 12
+2023-06-04 19:48:36.735 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 3, parameter value [1], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.735 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 4, parameter value [15000], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.735 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 5, parameter value [6], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.735 TRACE 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+2023-06-04 19:48:36.736 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:36.736 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM order_record WHERE id = ?]
+2023-06-04 19:48:36.736 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [6], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:36.737 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:36.737 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE id = ?]
+2023-06-04 19:48:36.737 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:36.737 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:36.737 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM order_item WHERE order_id = ?]
+2023-06-04 19:48:36.738 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [6], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:36.739 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL query [SELECT * FROM default_discount_policy]
+2023-06-04 19:48:36.739 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL query [SELECT * FROM default_delivery_policy]
+2023-06-04 19:48:36.739 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : JdbcInsert not compiled before execution - invoking compile
+2023-06-04 19:48:36.740 DEBUG 5552 --- [    Test worker] o.s.j.c.m.TableMetaDataProviderFactory   : Using GenericTableMetaDataProvider
+2023-06-04 19:48:36.740 DEBUG 5552 --- [    Test worker] o.s.j.c.metadata.TableMetaDataProvider   : GetGeneratedKeys is supported
+2023-06-04 19:48:36.740 DEBUG 5552 --- [    Test worker] o.s.j.c.metadata.TableMetaDataProvider   : GeneratedKeysColumnNameArray is supported for H2
+2023-06-04 19:48:36.740 DEBUG 5552 --- [    Test worker] o.s.j.c.metadata.TableMetaDataProvider   : Retrieving meta-data for TEST/PUBLIC/PAYMENT_RECORD
+2023-06-04 19:48:36.740 DEBUG 5552 --- [    Test worker] o.s.j.c.metadata.TableMetaDataProvider   : Retrieved meta-data: 'ID', sqlType=-5, nullable=false
+2023-06-04 19:48:36.740 DEBUG 5552 --- [    Test worker] o.s.j.c.metadata.TableMetaDataProvider   : Retrieved meta-data: 'ORDER_ID', sqlType=-5, nullable=false
+2023-06-04 19:48:36.740 DEBUG 5552 --- [    Test worker] o.s.j.c.metadata.TableMetaDataProvider   : Retrieved meta-data: 'ORIGINAL_TOTAL_PRICE', sqlType=4, nullable=false
+2023-06-04 19:48:36.741 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Compiled insert object: insert string is [INSERT INTO payment_record (ORDER_ID, ORIGINAL_TOTAL_PRICE) VALUES(?, ?)]
+2023-06-04 19:48:36.741 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : JdbcInsert for table [payment_record] compiled
+2023-06-04 19:48:36.741 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : The following parameters are used for call INSERT INTO payment_record (ORDER_ID, ORIGINAL_TOTAL_PRICE) VALUES(?, ?) with: [6, 55000]
+2023-06-04 19:48:36.741 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:36.741 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:36.741 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Using generated keys support with array of column names.
+2023-06-04 19:48:36.741 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [6], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.741 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [55000], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.742 TRACE 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+2023-06-04 19:48:36.742 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : JdbcInsert not compiled before execution - invoking compile
+2023-06-04 19:48:36.742 DEBUG 5552 --- [    Test worker] o.s.j.c.m.TableMetaDataProviderFactory   : Using GenericTableMetaDataProvider
+2023-06-04 19:48:36.742 DEBUG 5552 --- [    Test worker] o.s.j.c.metadata.TableMetaDataProvider   : GetGeneratedKeys is supported
+2023-06-04 19:48:36.742 DEBUG 5552 --- [    Test worker] o.s.j.c.metadata.TableMetaDataProvider   : GeneratedKeysColumnNameArray is supported for H2
+2023-06-04 19:48:36.742 DEBUG 5552 --- [    Test worker] o.s.j.c.metadata.TableMetaDataProvider   : Retrieving meta-data for TEST/PUBLIC/APPLIED_DEFAULT_DISCOUNT_POLICY
+2023-06-04 19:48:36.742 DEBUG 5552 --- [    Test worker] o.s.j.c.metadata.TableMetaDataProvider   : Retrieved meta-data: 'ID', sqlType=-5, nullable=false
+2023-06-04 19:48:36.742 DEBUG 5552 --- [    Test worker] o.s.j.c.metadata.TableMetaDataProvider   : Retrieved meta-data: 'PAYMENT_RECORD_ID', sqlType=-5, nullable=false
+2023-06-04 19:48:36.742 DEBUG 5552 --- [    Test worker] o.s.j.c.metadata.TableMetaDataProvider   : Retrieved meta-data: 'DEFAULT_DISCOUNT_POLICY_ID', sqlType=-5, nullable=false
+2023-06-04 19:48:36.743 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Compiled insert object: insert string is [INSERT INTO applied_default_discount_policy (PAYMENT_RECORD_ID, DEFAULT_DISCOUNT_POLICY_ID) VALUES(?, ?)]
+2023-06-04 19:48:36.743 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : JdbcInsert for table [applied_default_discount_policy] compiled
+2023-06-04 19:48:36.743 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : The following parameters are used for call INSERT INTO applied_default_discount_policy (PAYMENT_RECORD_ID, DEFAULT_DISCOUNT_POLICY_ID) VALUES(?, ?) with: [1, 1]
+2023-06-04 19:48:36.743 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:36.743 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:36.743 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Using generated keys support with array of column names.
+2023-06-04 19:48:36.743 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.743 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [1], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.744 TRACE 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+2023-06-04 19:48:36.744 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : JdbcInsert not compiled before execution - invoking compile
+2023-06-04 19:48:36.744 DEBUG 5552 --- [    Test worker] o.s.j.c.m.TableMetaDataProviderFactory   : Using GenericTableMetaDataProvider
+2023-06-04 19:48:36.744 DEBUG 5552 --- [    Test worker] o.s.j.c.metadata.TableMetaDataProvider   : GetGeneratedKeys is supported
+2023-06-04 19:48:36.744 DEBUG 5552 --- [    Test worker] o.s.j.c.metadata.TableMetaDataProvider   : GeneratedKeysColumnNameArray is supported for H2
+2023-06-04 19:48:36.744 DEBUG 5552 --- [    Test worker] o.s.j.c.metadata.TableMetaDataProvider   : Retrieving meta-data for TEST/PUBLIC/APPLIED_DEFAULT_DELIVERY_POLICY
+2023-06-04 19:48:36.744 DEBUG 5552 --- [    Test worker] o.s.j.c.metadata.TableMetaDataProvider   : Retrieved meta-data: 'ID', sqlType=-5, nullable=false
+2023-06-04 19:48:36.744 DEBUG 5552 --- [    Test worker] o.s.j.c.metadata.TableMetaDataProvider   : Retrieved meta-data: 'PAYMENT_RECORD_ID', sqlType=-5, nullable=false
+2023-06-04 19:48:36.744 DEBUG 5552 --- [    Test worker] o.s.j.c.metadata.TableMetaDataProvider   : Retrieved meta-data: 'DEFAULT_DELIVERY_POLICY_ID', sqlType=-5, nullable=false
+2023-06-04 19:48:36.744 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Compiled insert object: insert string is [INSERT INTO applied_default_delivery_policy (PAYMENT_RECORD_ID, DEFAULT_DELIVERY_POLICY_ID) VALUES(?, ?)]
+2023-06-04 19:48:36.744 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : JdbcInsert for table [applied_default_delivery_policy] compiled
+2023-06-04 19:48:36.744 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : The following parameters are used for insert INSERT INTO applied_default_delivery_policy (PAYMENT_RECORD_ID, DEFAULT_DELIVERY_POLICY_ID) VALUES(?, ?) with: [1, 1]
+2023-06-04 19:48:36.745 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2023-06-04 19:48:36.745 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [INSERT INTO applied_default_delivery_policy (PAYMENT_RECORD_ID, DEFAULT_DELIVERY_POLICY_ID) VALUES(?, ?)]
+2023-06-04 19:48:36.745 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.745 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [1], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.745 TRACE 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows
+2023-06-04 19:48:36.745 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:36.745 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM payment_record WHERE order_id = ?]
+2023-06-04 19:48:36.746 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [6], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:36.746 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:36.746 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT B.id AS id, B.name AS name, B.threshold AS threshold, B.discount_rate AS discount_rate FROM applied_default_discount_policy AS A INNER JOIN default_discount_policy AS B ON A.default_discount_policy_id = B.id WHERE A.payment_record_id = ?]
+2023-06-04 19:48:36.747 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:36.747 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:36.747 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT B.id AS id, B.name AS name, B.fee AS fee FROM applied_default_delivery_policy AS A INNER JOIN default_delivery_policy AS B ON A.default_delivery_policy_id = B.id WHERE A.payment_record_id = ?]
+2023-06-04 19:48:36.748 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:36.753  INFO 5552 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@8a4fa18 testClass = PaymentServiceTest, testInstance = cart.application.PaymentServiceTest@f0ad7ff, testMethod = findPaymentRecordByOrder@PaymentServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@37fbc64f testClass = PaymentServiceTest, locations = '{}', classes = '{class cart.JwpCartApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@22c7ccab, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@61fe294f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@74b0337f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2e230d4c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@244c244e, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@6a85b204], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+2023-06-04 19:48:36.755  INFO 5552 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@8a4fa18 testClass = PaymentServiceTest, testInstance = cart.application.PaymentServiceTest@68056449, testMethod = createPaymentRecordAndSave@PaymentServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@37fbc64f testClass = PaymentServiceTest, locations = '{}', classes = '{class cart.JwpCartApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@22c7ccab, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@61fe294f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@74b0337f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2e230d4c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@244c244e, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@6a85b204], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.jdbc.support.JdbcTransactionManager@1c8b6ee4]; rollback [true]
+2023-06-04 19:48:36.756 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : The following parameters are used for call INSERT INTO order_record (MEMBER_ID, ORDER_TIME) VALUES(?, ?) with: [1, 2023-06-04 19:48:36.7563799]
+2023-06-04 19:48:36.757 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:36.757 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:36.757 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Using generated keys support with array of column names.
+2023-06-04 19:48:36.757 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.757 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [2023-06-04 19:48:36.7563799], value class [java.sql.Timestamp], SQL type 93
+2023-06-04 19:48:36.757 TRACE 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+2023-06-04 19:48:36.757 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : The following parameters are used for call INSERT INTO order_item (NAME, IMAGE_URL, QUANTITY, TOTAL_PRICE, ORDER_ID) VALUES(?, ?, ?, ?, ?) with: [치킨, http://example.com/chicken.jpg, 1, 10000, 7]
+2023-06-04 19:48:36.758 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:36.758 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:36.758 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Using generated keys support with array of column names.
+2023-06-04 19:48:36.758 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [치킨], value class [java.lang.String], SQL type 12
+2023-06-04 19:48:36.758 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [http://example.com/chicken.jpg], value class [java.lang.String], SQL type 12
+2023-06-04 19:48:36.758 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 3, parameter value [1], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.758 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 4, parameter value [10000], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.758 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 5, parameter value [7], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.759 TRACE 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+2023-06-04 19:48:36.759 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : The following parameters are used for call INSERT INTO order_item (NAME, IMAGE_URL, QUANTITY, TOTAL_PRICE, ORDER_ID) VALUES(?, ?, ?, ?, ?) with: [피자, http://example.com/pizza.jpg, 2, 30000, 7]
+2023-06-04 19:48:36.759 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:36.759 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:36.759 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Using generated keys support with array of column names.
+2023-06-04 19:48:36.759 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [피자], value class [java.lang.String], SQL type 12
+2023-06-04 19:48:36.759 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [http://example.com/pizza.jpg], value class [java.lang.String], SQL type 12
+2023-06-04 19:48:36.759 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 3, parameter value [2], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.759 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 4, parameter value [30000], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.759 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 5, parameter value [7], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.760 TRACE 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+2023-06-04 19:48:36.760 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : The following parameters are used for call INSERT INTO order_item (NAME, IMAGE_URL, QUANTITY, TOTAL_PRICE, ORDER_ID) VALUES(?, ?, ?, ?, ?) with: [보쌈, http://example.com/pizza.jpg, 1, 15000, 7]
+2023-06-04 19:48:36.760 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:36.760 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:36.760 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Using generated keys support with array of column names.
+2023-06-04 19:48:36.760 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [보쌈], value class [java.lang.String], SQL type 12
+2023-06-04 19:48:36.760 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [http://example.com/pizza.jpg], value class [java.lang.String], SQL type 12
+2023-06-04 19:48:36.760 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 3, parameter value [1], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.760 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 4, parameter value [15000], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.760 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 5, parameter value [7], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.761 TRACE 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+2023-06-04 19:48:36.761 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:36.761 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM order_record WHERE id = ?]
+2023-06-04 19:48:36.761 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [7], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:36.762 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:36.762 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE id = ?]
+2023-06-04 19:48:36.762 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:36.762 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:36.762 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM order_item WHERE order_id = ?]
+2023-06-04 19:48:36.763 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [7], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:36.764 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL query [SELECT * FROM default_discount_policy]
+2023-06-04 19:48:36.764 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL query [SELECT * FROM default_delivery_policy]
+2023-06-04 19:48:36.765 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : The following parameters are used for call INSERT INTO payment_record (ORDER_ID, ORIGINAL_TOTAL_PRICE) VALUES(?, ?) with: [7, 55000]
+2023-06-04 19:48:36.765 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:36.765 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:36.765 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Using generated keys support with array of column names.
+2023-06-04 19:48:36.765 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [7], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.765 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [55000], value class [java.lang.Integer], SQL type 4
+2023-06-04 19:48:36.765 TRACE 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+2023-06-04 19:48:36.765 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : The following parameters are used for call INSERT INTO applied_default_discount_policy (PAYMENT_RECORD_ID, DEFAULT_DISCOUNT_POLICY_ID) VALUES(?, ?) with: [2, 1]
+2023-06-04 19:48:36.765 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:36.765 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:36.766 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : Using generated keys support with array of column names.
+2023-06-04 19:48:36.766 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [2], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.766 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [1], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.766 TRACE 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+2023-06-04 19:48:36.766 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.simple.SimpleJdbcInsert    : The following parameters are used for insert INSERT INTO applied_default_delivery_policy (PAYMENT_RECORD_ID, DEFAULT_DELIVERY_POLICY_ID) VALUES(?, ?) with: [2, 1]
+2023-06-04 19:48:36.766 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2023-06-04 19:48:36.766 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [INSERT INTO applied_default_delivery_policy (PAYMENT_RECORD_ID, DEFAULT_DELIVERY_POLICY_ID) VALUES(?, ?)]
+2023-06-04 19:48:36.766 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [2], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.766 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [1], value class [java.lang.Long], SQL type -5
+2023-06-04 19:48:36.767 TRACE 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows
+2023-06-04 19:48:36.770  INFO 5552 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@8a4fa18 testClass = PaymentServiceTest, testInstance = cart.application.PaymentServiceTest@68056449, testMethod = createPaymentRecordAndSave@PaymentServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@37fbc64f testClass = PaymentServiceTest, locations = '{}', classes = '{class cart.JwpCartApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@22c7ccab, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@61fe294f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@74b0337f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2e230d4c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@244c244e, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@6a85b204], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.8.1</a> at 2023. 6. 4. 오후 7:49:16</p>
+</div>
+</div>
+</body>
+</html>

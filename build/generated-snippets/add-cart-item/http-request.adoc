@@ -1,0 +1,12 @@
+[source,http,options="nowrap"]
+----
+POST /cart-items HTTP/1.1
+Authorization: Basic YUBhLmNvbToxMjM0
+Content-Type: application/json
+Host: localhost:60045
+Content-Length: 23
+
+{
+  "productId" : 4
+}
+----

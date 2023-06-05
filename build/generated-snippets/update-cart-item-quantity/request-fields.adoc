@@ -1,0 +1,8 @@
+|===
+|Path|Type|Description
+
+|`+quantity+`
+|`+Number+`
+|설정할 수량
+
+|===

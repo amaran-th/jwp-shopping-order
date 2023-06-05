@@ -1,0 +1,6 @@
+[source,options="nowrap"]
+----
+{
+  "cartItemIds" : [ 4, 5, 6 ]
+}
+----

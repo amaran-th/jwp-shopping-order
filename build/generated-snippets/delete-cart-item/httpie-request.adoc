@@ -1,0 +1,5 @@
+[source,bash]
+----
+$ http --auth 'a@a.com:1234' DELETE 'http://localhost:59789/cart-items/4' \
+    'Content-Type:application/json'
+----

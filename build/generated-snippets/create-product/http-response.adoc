@@ -1,0 +1,12 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 201 Created
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Location: /products/4
+Date: Sun, 04 Jun 2023 10:49:15 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+----

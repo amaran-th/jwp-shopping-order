@@ -1,0 +1,34 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 04 Jun 2023 10:48:24 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Content-Length: 479
+
+[ {
+  "id" : 1,
+  "orderTime" : "2023-06-04T19:48:25.236807",
+  "productList" : [ {
+    "name" : "치킨",
+    "quantity" : 1,
+    "imageUrl" : "http://example.com/chicken.jpg",
+    "totalPrice" : 10000
+  }, {
+    "name" : "피자",
+    "quantity" : 2,
+    "imageUrl" : "http://example.com/pizza.jpg",
+    "totalPrice" : 30000
+  }, {
+    "name" : "보쌈",
+    "quantity" : 1,
+    "imageUrl" : "http://example.com/pizza.jpg",
+    "totalPrice" : 15000
+  } ]
+} ]
+----

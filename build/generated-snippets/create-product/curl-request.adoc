@@ -1,0 +1,10 @@
+[source,bash]
+----
+$ curl 'http://localhost:60082/products' -i -X POST \
+    -H 'Content-Type: application/json' \
+    -d '{
+  "name" : "ġŲ",
+  "price" : 10000,
+  "imageUrl" : "http://example.com/chicken.jpg"
+}'
+----

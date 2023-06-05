@@ -1,0 +1,13 @@
+[source,options="nowrap"]
+----
+{
+  "originalPrice" : 55000,
+  "discounts" : [ {
+    "discountPolicy" : "5筌띾슣�뜚 占쎌뵠占쎄맒 �뤃�됤꼻 占쎈뻻 10% 占쎈막占쎌뵥",
+    "discountAmount" : 5500
+  } ],
+  "discountedPrice" : 49500,
+  "deliveryFee" : 3500,
+  "finalPrice" : 53000
+}
+----

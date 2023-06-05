@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cart.integration.PaymentIntegrationTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-06-04T10:48:29" hostname="LAPTOP-4RK3SJ4F" time="3.5">
+  <properties/>
+  <testcase name="선택한 장바구니 아이템의 예상 결제 금액을 조회한다" classname="cart.integration.PaymentIntegrationTest" time="3.5">
+    <failure message="org.opentest4j.MultipleFailuresError: Multiple Failures (1 failure)&#13;&#10;&#9;java.lang.AssertionError: &#13;&#10;Expecting actual:&#13;&#10;  cart.dto.PaymentResponse@58146dfa&#13;&#10;to be equal to:&#13;&#10;  cart.dto.PaymentResponse@5cda4141&#13;&#10;when recursively comparing field by field, but found the following difference:&#13;&#10;&#13;&#10;field/property 'discounts[0].discountPolicy' differ:&#13;&#10;- actual value  : &quot;5留뚯썝 �씠�긽 援щℓ �떆 10% �븷�씤&quot;&#13;&#10;- expected value: &quot;5만원 이상 구매 시 10% 할인&quot;&#13;&#10;&#13;&#10;The recursive comparison was performed with this configuration:&#13;&#10;- no overridden equals methods were used in the comparison (except for java types)&#13;&#10;- these types were compared with the following comparators:&#13;&#10;  - java.lang.Double -&gt; DoubleComparator[precision=1.0E-15]&#13;&#10;  - java.lang.Float -&gt; FloatComparator[precision=1.0E-6]&#13;&#10;  - java.nio.file.Path -&gt; lexicographic comparator (Path natural order)&#13;&#10;- actual and expected objects and their fields were compared field by field recursively even if they were not of the same type, this allows for example to compare a Person to a PersonDto (call strictTypeChecking(true) to change that behavior).&#13;&#10;" type="org.opentest4j.MultipleFailuresError">org.opentest4j.MultipleFailuresError: Multiple Failures (1 failure)
+	java.lang.AssertionError: 
+Expecting actual:
+  cart.dto.PaymentResponse@58146dfa
+to be equal to:
+  cart.dto.PaymentResponse@5cda4141
+when recursively comparing field by field, but found the following difference:
+
+field/property 'discounts[0].discountPolicy' differ:
+- actual value  : &quot;5留뚯썝 �씠�긽 援щℓ �떆 10% �븷�씤&quot;
+- expected value: &quot;5만원 이상 구매 시 10% 할인&quot;
+
+The recursive comparison was performed with this configuration:
+- no overridden equals methods were used in the comparison (except for java types)
+- these types were compared with the following comparators:
+  - java.lang.Double -&gt; DoubleComparator[precision=1.0E-15]
+  - java.lang.Float -&gt; FloatComparator[precision=1.0E-6]
+  - java.nio.file.Path -&gt; lexicographic comparator (Path natural order)
+- actual and expected objects and their fields were compared field by field recursively even if they were not of the same type, this allows for example to compare a Person to a PersonDto (call strictTypeChecking(true) to change that behavior).
+
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:38)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2911)
+	at cart.integration.PaymentIntegrationTest.getPayment(PaymentIntegrationTest.java:95)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:133)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+	Suppressed: java.lang.AssertionError: 
+Expecting actual:
+  cart.dto.PaymentResponse@58146dfa
+to be equal to:
+  cart.dto.PaymentResponse@5cda4141
+when recursively comparing field by field, but found the following difference:
+
+field/property 'discounts[0].discountPolicy' differ:
+- actual value  : &quot;5留뚯썝 �씠�긽 援щℓ �떆 10% �븷�씤&quot;
+- expected value: &quot;5만원 이상 구매 시 10% 할인&quot;
+
+The recursive comparison was performed with this configuration:
+- no overridden equals methods were used in the comparison (except for java types)
+- these types were compared with the following comparators:
+  - java.lang.Double -&gt; DoubleComparator[precision=1.0E-15]
+  - java.lang.Float -&gt; FloatComparator[precision=1.0E-6]
+  - java.nio.file.Path -&gt; lexicographic comparator (Path natural order)
+- actual and expected objects and their fields were compared field by field recursively even if they were not of the same type, this allows for example to compare a Person to a PersonDto (call strictTypeChecking(true) to change that behavior).
+
+		at cart.integration.PaymentIntegrationTest.lambda$getPayment$1(PaymentIntegrationTest.java:97)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 94 more
+Caused by: java.lang.AssertionError: 
+Expecting actual:
+  cart.dto.PaymentResponse@58146dfa
+to be equal to:
+  cart.dto.PaymentResponse@5cda4141
+when recursively comparing field by field, but found the following difference:
+
+field/property 'discounts[0].discountPolicy' differ:
+- actual value  : &quot;5留뚯썝 �씠�긽 援щℓ �떆 10% �븷�씤&quot;
+- expected value: &quot;5만원 이상 구매 시 10% 할인&quot;
+
+The recursive comparison was performed with this configuration:
+- no overridden equals methods were used in the comparison (except for java types)
+- these types were compared with the following comparators:
+  - java.lang.Double -&gt; DoubleComparator[precision=1.0E-15]
+  - java.lang.Float -&gt; FloatComparator[precision=1.0E-6]
+  - java.nio.file.Path -&gt; lexicographic comparator (Path natural order)
+- actual and expected objects and their fields were compared field by field recursively even if they were not of the same type, this allows for example to compare a Person to a PersonDto (call strictTypeChecking(true) to change that behavior).
+
+	at cart.integration.PaymentIntegrationTest.lambda$getPayment$1(PaymentIntegrationTest.java:97)
+	at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+	... 94 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[2023-06-04 19:48:29.576  INFO 5552 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [cart.integration.PaymentIntegrationTest], using SpringBootContextLoader
+2023-06-04 19:48:29.578  INFO 5552 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [cart.integration.PaymentIntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-06-04 19:48:29.578  INFO 5552 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [cart.integration.PaymentIntegrationTest]: PaymentIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-06-04 19:48:29.581  INFO 5552 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration cart.JwpCartApplication for test class cart.integration.PaymentIntegrationTest
+2023-06-04 19:48:29.583  INFO 5552 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-06-04 19:48:29.583  INFO 5552 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@29b46809, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6a2f9a74, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3816ecfc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5cc3dc86, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@56bd0337, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4057dfae, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4f29ba54, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@d4c68db, org.springframework.test.context.event.EventPublishingTestExecutionListener@33d666fe, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4d027585, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4f7b8d6b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@219f3eef, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@217e5db4, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7f0eba43, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6c8d701c]
+2023-06-04 19:48:30.787  INFO 5552 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-04 19:48:30.788  INFO 5552 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-04 19:48:30.794  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-06-04 19:48:30.798  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.9)
+
+2023-06-04 19:48:30.844  INFO 5552 --- [    Test worker] cart.integration.PaymentIntegrationTest  : Starting PaymentIntegrationTest using Java 11.0.16.1 on LAPTOP-4RK3SJ4F with PID 5552 (started by SongSeyeon in C:\Github_projects\jwp-shopping-order)
+2023-06-04 19:48:30.844  INFO 5552 --- [    Test worker] cart.integration.PaymentIntegrationTest  : No active profile set, falling back to 1 default profile: "default"
+2023-06-04 19:48:31.620  INFO 5552 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-04 19:48:31.621  INFO 5552 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-04 19:48:31.621  INFO 5552 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-06-04 19:48:31.660  INFO 5552 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-04 19:48:31.660  INFO 5552 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 813 ms
+2023-06-04 19:48:31.972  INFO 5552 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2023-06-04 19:48:31.996  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-06-04 19:48:31.999  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-06-04 19:48:32.701  INFO 5552 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-04 19:48:32.757  INFO 5552 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59765 (http) with context path ''
+2023-06-04 19:48:32.760  INFO 5552 --- [    Test worker] cart.integration.PaymentIntegrationTest  : Started PaymentIntegrationTest in 1.959 seconds (JVM running for 35.568)
+2023-06-04 19:48:32.766 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:32.766 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE id = ?]
+2023-06-04 19:48:32.766 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:32.780  INFO 5552 --- [o-auto-5-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 19:48:32.781  INFO 5552 --- [o-auto-5-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-04 19:48:32.782  INFO 5552 --- [o-auto-5-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-04 19:48:32.785 DEBUG 5552 --- [o-auto-5-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:32.785 DEBUG 5552 --- [o-auto-5-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:32.786 TRACE 5552 --- [o-auto-5-exec-1] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 75
+host: localhost:59765
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:32 GMT
+Location: /products/4
+
+
+
+
+2023-06-04 19:48:32.826 DEBUG 5552 --- [o-auto-5-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:32.826 DEBUG 5552 --- [o-auto-5-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:32.826 TRACE 5552 --- [o-auto-5-exec-2] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 73
+host: localhost:59765
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:32 GMT
+Location: /products/5
+
+
+
+
+2023-06-04 19:48:32.860 DEBUG 5552 --- [o-auto-5-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:32.860 DEBUG 5552 --- [o-auto-5-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:32.861 TRACE 5552 --- [o-auto-5-exec-3] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 73
+host: localhost:59765
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:32 GMT
+Location: /products/6
+
+
+
+
+Request method:	POST
+Request URI:	http://localhost:59765/cart-items
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "productId": 4
+}
+2023-06-04 19:48:32.892 DEBUG 5552 --- [o-auto-5-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:32.893 DEBUG 5552 --- [o-auto-5-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:48:32.893 TRACE 5552 --- [o-auto-5-exec-4] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:48:32.895 DEBUG 5552 --- [o-auto-5-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:32.895 DEBUG 5552 --- [o-auto-5-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM product WHERE id = ?]
+2023-06-04 19:48:32.895 TRACE 5552 --- [o-auto-5-exec-4] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [4], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:32.895 DEBUG 5552 --- [o-auto-5-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:32.895 DEBUG 5552 --- [o-auto-5-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:32.896 TRACE 5552 --- [o-auto-5-exec-4] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /cart-items HTTP/1.1
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+content-type: application/json
+content-length: 15
+host: localhost:59765
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:32 GMT
+Location: /cart-items/4
+
+
+
+
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Location: /cart-items/4
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:32 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Request method:	POST
+Request URI:	http://localhost:59765/cart-items
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "productId": 5
+}
+2023-06-04 19:48:32.910 DEBUG 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:32.910 DEBUG 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:48:32.910 TRACE 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:48:32.911 DEBUG 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:32.911 DEBUG 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM product WHERE id = ?]
+2023-06-04 19:48:32.911 TRACE 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [5], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:32.911 DEBUG 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:32.911 DEBUG 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:32.912 TRACE 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /cart-items HTTP/1.1
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+content-type: application/json
+content-length: 15
+host: localhost:59765
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:32 GMT
+Location: /cart-items/5
+
+
+
+
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Location: /cart-items/5
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:32 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Request method:	POST
+Request URI:	http://localhost:59765/cart-items
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "productId": 6
+}
+2023-06-04 19:48:32.930 DEBUG 5552 --- [o-auto-5-exec-6] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:32.930 DEBUG 5552 --- [o-auto-5-exec-6] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:48:32.930 TRACE 5552 --- [o-auto-5-exec-6] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:48:32.931 DEBUG 5552 --- [o-auto-5-exec-6] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:32.931 DEBUG 5552 --- [o-auto-5-exec-6] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM product WHERE id = ?]
+2023-06-04 19:48:32.932 TRACE 5552 --- [o-auto-5-exec-6] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [6], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:32.932 DEBUG 5552 --- [o-auto-5-exec-6] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:32.932 DEBUG 5552 --- [o-auto-5-exec-6] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:32.932 TRACE 5552 --- [o-auto-5-exec-6] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /cart-items HTTP/1.1
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+content-type: application/json
+content-length: 15
+host: localhost:59765
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:32 GMT
+Location: /cart-items/6
+
+
+
+
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Location: /cart-items/6
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:32 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Request method:	PATCH
+Request URI:	http://localhost:59765/cart-items/5
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "quantity": 2
+}
+2023-06-04 19:48:32.950 DEBUG 5552 --- [o-auto-5-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:32.950 DEBUG 5552 --- [o-auto-5-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:48:32.950 TRACE 5552 --- [o-auto-5-exec-7] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:48:32.952 DEBUG 5552 --- [o-auto-5-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:32.952 DEBUG 5552 --- [o-auto-5-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT cart_item.id, cart_item.member_id, member.email, product.id, product.name, product.price, product.image_url, cart_item.quantity FROM cart_item INNER JOIN member ON cart_item.member_id = member.id INNER JOIN product ON cart_item.product_id = product.id WHERE cart_item.id = ?]
+2023-06-04 19:48:32.953 TRACE 5552 --- [o-auto-5-exec-7] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [5], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:32.953 DEBUG 5552 --- [o-auto-5-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2023-06-04 19:48:32.953 DEBUG 5552 --- [o-auto-5-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [UPDATE cart_item SET quantity = ? WHERE id = ?]
+2023-06-04 19:48:32.954 TRACE 5552 --- [o-auto-5-exec-7] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [2], value class [java.lang.Integer], SQL type unknown
+2023-06-04 19:48:32.954 TRACE 5552 --- [o-auto-5-exec-7] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [5], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:32.954 TRACE 5552 --- [o-auto-5-exec-7] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows
+
+###### HTTP Request ######
+PATCH /cart-items/5 HTTP/1.1
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+content-type: application/json
+content-length: 14
+host: localhost:59765
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 200 OK
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:32 GMT
+
+
+
+
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:32 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Request method:	GET
+Request URI:	http://localhost:59765/total-cart-price?cartItemIds=4&cartItemIds=5&cartItemIds=6
+Proxy:			<none>
+Request params:	<none>
+Query params:	cartItemIds=[4, 5, 6]
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2023-06-04 19:48:33.015 DEBUG 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:33.015 DEBUG 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:48:33.015 TRACE 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:48:33.020 DEBUG 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:33.020 DEBUG 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT cart_item.id, cart_item.member_id, member.email, product.id, product.name, product.price, product.image_url, cart_item.quantity FROM cart_item INNER JOIN member ON cart_item.member_id = member.id INNER JOIN product ON cart_item.product_id = product.id WHERE cart_item.id = ?]
+2023-06-04 19:48:33.020 TRACE 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [4], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:33.020 DEBUG 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:33.020 DEBUG 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT cart_item.id, cart_item.member_id, member.email, product.id, product.name, product.price, product.image_url, cart_item.quantity FROM cart_item INNER JOIN member ON cart_item.member_id = member.id INNER JOIN product ON cart_item.product_id = product.id WHERE cart_item.id = ?]
+2023-06-04 19:48:33.020 TRACE 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [5], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:33.021 DEBUG 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:33.021 DEBUG 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT cart_item.id, cart_item.member_id, member.email, product.id, product.name, product.price, product.image_url, cart_item.quantity FROM cart_item INNER JOIN member ON cart_item.member_id = member.id INNER JOIN product ON cart_item.product_id = product.id WHERE cart_item.id = ?]
+2023-06-04 19:48:33.021 TRACE 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [6], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:33.022 DEBUG 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing SQL query [SELECT * FROM default_discount_policy]
+2023-06-04 19:48:33.022 DEBUG 5552 --- [o-auto-5-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing SQL query [SELECT * FROM default_delivery_policy]
+
+###### HTTP Request ######
+GET /total-cart-price?cartItemIds=4&cartItemIds=5&cartItemIds=6 HTTP/1.1
+content-type: application/json
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+host: localhost:59765
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Date: Sun, 04 Jun 2023 10:48:32 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 04 Jun 2023 10:48:32 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "originalPrice": 55000,
+    "discounts": [
+        {
+            "discountPolicy": "5留뚯썝 ?씠?긽 援щℓ ?떆 10% ?븷?씤",
+            "discountAmount": 5500
+        }
+    ],
+    "discountedPrice": 49500,
+    "deliveryFee": 3500,
+    "finalPrice": 53000
+}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

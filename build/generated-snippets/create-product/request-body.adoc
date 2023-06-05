@@ -1,0 +1,8 @@
+[source,options="nowrap"]
+----
+{
+  "name" : "치킨",
+  "price" : 10000,
+  "imageUrl" : "http://example.com/chicken.jpg"
+}
+----

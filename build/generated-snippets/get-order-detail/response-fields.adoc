@@ -1,0 +1,64 @@
+|===
+|Path|Type|Description
+
+|`+id+`
+|`+Number+`
+|주문 id
+
+|`+orderTime+`
+|`+String+`
+|주문 시간
+
+|`+productList+`
+|`+Array+`
+|주문한 상품들
+
+|`+productList[].name+`
+|`+String+`
+|상품 이름
+
+|`+productList[].quantity+`
+|`+Number+`
+|상품 수량
+
+|`+productList[].imageUrl+`
+|`+String+`
+|상품 이미지 url
+
+|`+productList[].totalPrice+`
+|`+Number+`
+|상품 가격
+
+|`+paymentAmount+`
+|`+Object+`
+|결제 정보
+
+|`+paymentAmount.originalPrice+`
+|`+Number+`
+|주문 금액
+
+|`+paymentAmount.discounts+`
+|`+Array+`
+|할인 정책 정보
+
+|`+paymentAmount.discounts[].discountPolicy+`
+|`+String+`
+|할인 정책
+
+|`+paymentAmount.discounts[].discountAmount+`
+|`+Number+`
+|정책별 할인 금액
+
+|`+paymentAmount.discountedPrice+`
+|`+Number+`
+|할인된 금액
+
+|`+paymentAmount.deliveryFee+`
+|`+Number+`
+|배송비
+
+|`+paymentAmount.finalPrice+`
+|`+Number+`
+|최종 결제 금액
+
+|===

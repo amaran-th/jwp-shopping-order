@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cart.domain.OrderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-04T10:48:36" hostname="LAPTOP-4RK3SJ4F" time="0.0">
+  <properties/>
+  <testcase name="calculateOriginalTotalPrice() 호출 시 주문 금액을 반환한다." classname="cart.domain.OrderTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

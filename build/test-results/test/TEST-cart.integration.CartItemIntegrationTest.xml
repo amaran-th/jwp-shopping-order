@@ -1,0 +1,1701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cart.integration.CartItemIntegrationTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-06-04T10:48:36" hostname="LAPTOP-4RK3SJ4F" time="23.497">
+  <properties/>
+  <testcase name="잘못된 사용자 정보로 장바구니에 아이템을 추가 요청시 실패한다." classname="cart.integration.CartItemIntegrationTest" time="3.198"/>
+  <testcase name="장바구니에 담긴 아이템을 삭제한다." classname="cart.integration.CartItemIntegrationTest" time="3.022"/>
+  <testcase name="다른 사용자가 담은 장바구니 아이템의 수량을 변경하려 하면 실패한다." classname="cart.integration.CartItemIntegrationTest" time="3.148"/>
+  <testcase name="장바구니에 아이템을 추가한다." classname="cart.integration.CartItemIntegrationTest" time="3.455"/>
+  <testcase name="장바구니에 담긴 아이템의 수량을 변경한다." classname="cart.integration.CartItemIntegrationTest" time="3.747"/>
+  <testcase name="사용자가 담은 장바구니 아이템을 조회한다." classname="cart.integration.CartItemIntegrationTest" time="3.735"/>
+  <testcase name="장바구니에 담긴 아이템의 수량을 0으로 변경하면, 장바구니에서 아이템이 삭제된다." classname="cart.integration.CartItemIntegrationTest" time="3.188"/>
+  <system-out><![CDATA[2023-06-04 19:48:36.799  INFO 5552 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [cart.integration.CartItemIntegrationTest], using SpringBootContextLoader
+2023-06-04 19:48:36.801  INFO 5552 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [cart.integration.CartItemIntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-06-04 19:48:36.801  INFO 5552 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [cart.integration.CartItemIntegrationTest]: CartItemIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-06-04 19:48:36.805  INFO 5552 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration cart.JwpCartApplication for test class cart.integration.CartItemIntegrationTest
+2023-06-04 19:48:36.808  INFO 5552 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-06-04 19:48:36.808  INFO 5552 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1dbf3e43, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@53d6b0f7, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6e1ffdb, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3c56fdae, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@58ff9141, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3ec8d3a1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@375efc84, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3c6ecc4c, org.springframework.test.context.event.EventPublishingTestExecutionListener@183f3719, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6092aa64, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@20e8c02e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6a2e74d3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@bc80170, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7efc4be7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@18f30da6]
+2023-06-04 19:48:38.125  INFO 5552 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-04 19:48:38.125  INFO 5552 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-04 19:48:38.130  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2023-06-04 19:48:38.137  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.9)
+
+2023-06-04 19:48:38.181  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : Starting CartItemIntegrationTest using Java 11.0.16.1 on LAPTOP-4RK3SJ4F with PID 5552 (started by SongSeyeon in C:\Github_projects\jwp-shopping-order)
+2023-06-04 19:48:38.181  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2023-06-04 19:48:38.828  INFO 5552 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-04 19:48:38.829  INFO 5552 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-04 19:48:38.829  INFO 5552 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-06-04 19:48:38.882  INFO 5552 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-04 19:48:38.882  INFO 5552 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 699 ms
+2023-06-04 19:48:39.209  INFO 5552 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2023-06-04 19:48:39.228  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2023-06-04 19:48:39.229  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2023-06-04 19:48:39.841  INFO 5552 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-04 19:48:39.890  INFO 5552 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59779 (http) with context path ''
+2023-06-04 19:48:39.893  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : Started CartItemIntegrationTest in 1.752 seconds (JVM running for 42.701)
+2023-06-04 19:48:39.910  INFO 5552 --- [o-auto-6-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 19:48:39.911  INFO 5552 --- [o-auto-6-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-04 19:48:39.912  INFO 5552 --- [o-auto-6-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-04 19:48:39.915 DEBUG 5552 --- [o-auto-6-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:39.915 DEBUG 5552 --- [o-auto-6-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:39.916 TRACE 5552 --- [o-auto-6-exec-1] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 75
+host: localhost:59779
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:39 GMT
+Location: /products/4
+
+
+
+
+2023-06-04 19:48:39.947 DEBUG 5552 --- [o-auto-6-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:39.947 DEBUG 5552 --- [o-auto-6-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:39.947 TRACE 5552 --- [o-auto-6-exec-2] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 73
+host: localhost:59779
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:39 GMT
+Location: /products/5
+
+
+
+
+2023-06-04 19:48:39.968 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:39.968 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE id = ?]
+2023-06-04 19:48:39.969 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:39.969 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:39.969 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE id = ?]
+2023-06-04 19:48:39.969 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [2], value class [java.lang.Long], SQL type unknown
+Request method:	POST
+Request URI:	http://localhost:59779/cart-items
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0YXNkZg==
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "productId": 4
+}
+2023-06-04 19:48:39.981 DEBUG 5552 --- [o-auto-6-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:39.981 DEBUG 5552 --- [o-auto-6-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:48:39.982 TRACE 5552 --- [o-auto-6-exec-3] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+
+###### HTTP Request ######
+POST /cart-items HTTP/1.1
+authorization: Basic YUBhLmNvbToxMjM0YXNkZg==
+accept: */*
+content-type: application/json
+content-length: 15
+host: localhost:59779
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 401 Unauthorized
+Transfer-Encoding: chunked
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Date: Sun, 04 Jun 2023 10:48:39 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 401 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 04 Jun 2023 10:48:39 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "errorMessage": "유저 정보가 올바르지 않습니다."
+}
+2023-06-04 19:48:41.167  INFO 5552 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-04 19:48:41.167  INFO 5552 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-04 19:48:41.172  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2023-06-04 19:48:41.173  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.9)
+
+2023-06-04 19:48:41.218  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : Starting CartItemIntegrationTest using Java 11.0.16.1 on LAPTOP-4RK3SJ4F with PID 5552 (started by SongSeyeon in C:\Github_projects\jwp-shopping-order)
+2023-06-04 19:48:41.218  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2023-06-04 19:48:41.889  INFO 5552 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-04 19:48:41.890  INFO 5552 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-04 19:48:41.890  INFO 5552 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-06-04 19:48:41.925  INFO 5552 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-04 19:48:41.926  INFO 5552 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 705 ms
+2023-06-04 19:48:42.194  INFO 5552 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2023-06-04 19:48:42.212  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2023-06-04 19:48:42.214  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2023-06-04 19:48:42.780  INFO 5552 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-04 19:48:42.833  INFO 5552 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59789 (http) with context path ''
+2023-06-04 19:48:42.836  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : Started CartItemIntegrationTest in 1.66 seconds (JVM running for 45.645)
+2023-06-04 19:48:42.852  INFO 5552 --- [o-auto-7-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 19:48:42.852  INFO 5552 --- [o-auto-7-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-04 19:48:42.853  INFO 5552 --- [o-auto-7-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-04 19:48:42.856 DEBUG 5552 --- [o-auto-7-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:42.856 DEBUG 5552 --- [o-auto-7-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:42.857 TRACE 5552 --- [o-auto-7-exec-1] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 75
+host: localhost:59789
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:42 GMT
+Location: /products/4
+
+
+
+
+2023-06-04 19:48:42.887 DEBUG 5552 --- [o-auto-7-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:42.887 DEBUG 5552 --- [o-auto-7-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:42.887 TRACE 5552 --- [o-auto-7-exec-2] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 73
+host: localhost:59789
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:42 GMT
+Location: /products/5
+
+
+
+
+2023-06-04 19:48:42.910 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:42.910 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE id = ?]
+2023-06-04 19:48:42.910 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:42.910 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:42.910 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE id = ?]
+2023-06-04 19:48:42.910 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [2], value class [java.lang.Long], SQL type unknown
+Request method:	POST
+Request URI:	http://localhost:59789/cart-items
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "productId": 4
+}
+2023-06-04 19:48:42.923 DEBUG 5552 --- [o-auto-7-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:42.923 DEBUG 5552 --- [o-auto-7-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:48:42.923 TRACE 5552 --- [o-auto-7-exec-3] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:48:42.925 DEBUG 5552 --- [o-auto-7-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:42.925 DEBUG 5552 --- [o-auto-7-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM product WHERE id = ?]
+2023-06-04 19:48:42.925 TRACE 5552 --- [o-auto-7-exec-3] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [4], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:42.925 DEBUG 5552 --- [o-auto-7-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:42.925 DEBUG 5552 --- [o-auto-7-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:42.926 TRACE 5552 --- [o-auto-7-exec-3] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /cart-items HTTP/1.1
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+content-type: application/json
+content-length: 15
+host: localhost:59789
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:42 GMT
+Location: /cart-items/4
+
+
+
+
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Location: /cart-items/4
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:42 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Request method:	DELETE
+Request URI:	http://localhost:59789/cart-items/4
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2023-06-04 19:48:42.966 DEBUG 5552 --- [o-auto-7-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:42.967 DEBUG 5552 --- [o-auto-7-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:48:42.967 TRACE 5552 --- [o-auto-7-exec-4] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:48:42.967 DEBUG 5552 --- [o-auto-7-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:42.968 DEBUG 5552 --- [o-auto-7-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT cart_item.id, cart_item.member_id, member.email, product.id, product.name, product.price, product.image_url, cart_item.quantity FROM cart_item INNER JOIN member ON cart_item.member_id = member.id INNER JOIN product ON cart_item.product_id = product.id WHERE cart_item.id = ?]
+2023-06-04 19:48:42.968 TRACE 5552 --- [o-auto-7-exec-4] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [4], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:42.969 DEBUG 5552 --- [o-auto-7-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2023-06-04 19:48:42.969 DEBUG 5552 --- [o-auto-7-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [DELETE FROM cart_item WHERE id = ?]
+2023-06-04 19:48:42.969 TRACE 5552 --- [o-auto-7-exec-4] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [4], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:42.969 TRACE 5552 --- [o-auto-7-exec-4] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows
+
+###### HTTP Request ######
+DELETE /cart-items/4 HTTP/1.1
+content-type: application/json
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+host: localhost:59789
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 204 No Content
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Date: Sun, 04 Jun 2023 10:48:42 GMT
+
+
+
+
+HTTP/1.1 204 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Date: Sun, 04 Jun 2023 10:48:42 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Request method:	GET
+Request URI:	http://localhost:59789/cart-items
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2023-06-04 19:48:42.998 DEBUG 5552 --- [o-auto-7-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:42.998 DEBUG 5552 --- [o-auto-7-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:48:42.998 TRACE 5552 --- [o-auto-7-exec-5] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:48:42.999 DEBUG 5552 --- [o-auto-7-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:42.999 DEBUG 5552 --- [o-auto-7-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT cart_item.id, cart_item.member_id, member.email, product.id, product.name, product.price, product.image_url, cart_item.quantity FROM cart_item INNER JOIN member ON cart_item.member_id = member.id INNER JOIN product ON cart_item.product_id = product.id WHERE cart_item.member_id = ?]
+2023-06-04 19:48:42.999 TRACE 5552 --- [o-auto-7-exec-5] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type unknown
+
+###### HTTP Request ######
+GET /cart-items HTTP/1.1
+content-type: application/json
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+host: localhost:59789
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Date: Sun, 04 Jun 2023 10:48:42 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 04 Jun 2023 10:48:42 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+[
+    {
+        "id": 1,
+        "quantity": 2,
+        "product": {
+            "id": 1,
+            "name": "移섑궓",
+            "price": 10000,
+            "imageUrl": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
+        }
+    },
+    {
+        "id": 2,
+        "quantity": 4,
+        "product": {
+            "id": 2,
+            "name": "?깘?윭?뱶",
+            "price": 20000,
+            "imageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
+        }
+    }
+]
+2023-06-04 19:48:44.306  INFO 5552 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-04 19:48:44.307  INFO 5552 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-04 19:48:44.312  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2023-06-04 19:48:44.313  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.9)
+
+2023-06-04 19:48:44.349  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : Starting CartItemIntegrationTest using Java 11.0.16.1 on LAPTOP-4RK3SJ4F with PID 5552 (started by SongSeyeon in C:\Github_projects\jwp-shopping-order)
+2023-06-04 19:48:44.349  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2023-06-04 19:48:44.982  INFO 5552 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-04 19:48:44.983  INFO 5552 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-04 19:48:44.983  INFO 5552 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-06-04 19:48:45.021  INFO 5552 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-04 19:48:45.021  INFO 5552 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 670 ms
+2023-06-04 19:48:45.307  INFO 5552 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2023-06-04 19:48:45.324  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2023-06-04 19:48:45.325  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2023-06-04 19:48:45.955  INFO 5552 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-04 19:48:46.004  INFO 5552 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59899 (http) with context path ''
+2023-06-04 19:48:46.008  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : Started CartItemIntegrationTest in 1.693 seconds (JVM running for 48.817)
+2023-06-04 19:48:46.024  INFO 5552 --- [o-auto-8-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 19:48:46.025  INFO 5552 --- [o-auto-8-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-04 19:48:46.026  INFO 5552 --- [o-auto-8-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-04 19:48:46.029 DEBUG 5552 --- [o-auto-8-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:46.029 DEBUG 5552 --- [o-auto-8-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:46.029 TRACE 5552 --- [o-auto-8-exec-1] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 75
+host: localhost:59899
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:46 GMT
+Location: /products/4
+
+
+
+
+2023-06-04 19:48:46.062 DEBUG 5552 --- [o-auto-8-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:46.062 DEBUG 5552 --- [o-auto-8-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:46.062 TRACE 5552 --- [o-auto-8-exec-2] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 73
+host: localhost:59899
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:46 GMT
+Location: /products/5
+
+
+
+
+2023-06-04 19:48:46.088 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:46.088 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE id = ?]
+2023-06-04 19:48:46.088 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:46.088 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:46.088 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE id = ?]
+2023-06-04 19:48:46.089 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [2], value class [java.lang.Long], SQL type unknown
+Request method:	POST
+Request URI:	http://localhost:59899/cart-items
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "productId": 4
+}
+2023-06-04 19:48:46.101 DEBUG 5552 --- [o-auto-8-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:46.101 DEBUG 5552 --- [o-auto-8-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:48:46.101 TRACE 5552 --- [o-auto-8-exec-3] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:48:46.103 DEBUG 5552 --- [o-auto-8-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:46.103 DEBUG 5552 --- [o-auto-8-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM product WHERE id = ?]
+2023-06-04 19:48:46.103 TRACE 5552 --- [o-auto-8-exec-3] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [4], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:46.104 DEBUG 5552 --- [o-auto-8-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:46.104 DEBUG 5552 --- [o-auto-8-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:46.105 TRACE 5552 --- [o-auto-8-exec-3] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /cart-items HTTP/1.1
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+content-type: application/json
+content-length: 15
+host: localhost:59899
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:46 GMT
+Location: /cart-items/4
+
+
+
+
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Location: /cart-items/4
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:46 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Request method:	PATCH
+Request URI:	http://localhost:59899/cart-items/4
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YkBiLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "quantity": 10
+}
+2023-06-04 19:48:46.148 DEBUG 5552 --- [o-auto-8-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:46.148 DEBUG 5552 --- [o-auto-8-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:48:46.148 TRACE 5552 --- [o-auto-8-exec-4] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [b@b.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:48:46.150 DEBUG 5552 --- [o-auto-8-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:46.150 DEBUG 5552 --- [o-auto-8-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT cart_item.id, cart_item.member_id, member.email, product.id, product.name, product.price, product.image_url, cart_item.quantity FROM cart_item INNER JOIN member ON cart_item.member_id = member.id INNER JOIN product ON cart_item.product_id = product.id WHERE cart_item.id = ?]
+2023-06-04 19:48:46.150 TRACE 5552 --- [o-auto-8-exec-4] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [4], value class [java.lang.Long], SQL type unknown
+
+###### HTTP Request ######
+PATCH /cart-items/4 HTTP/1.1
+authorization: Basic YkBiLmNvbToxMjM0
+accept: */*
+content-type: application/json
+content-length: 15
+host: localhost:59899
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 403 Forbidden
+Transfer-Encoding: chunked
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Date: Sun, 04 Jun 2023 10:48:46 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 403 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 04 Jun 2023 10:48:46 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "errorMessage": "해당 유저가 접근할 수 없는 CartItem 입니다.; cartItemId=4, memberId=2"
+}
+2023-06-04 19:48:47.367  INFO 5552 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-04 19:48:47.367  INFO 5552 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-04 19:48:47.373  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2023-06-04 19:48:47.374  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.9)
+
+2023-06-04 19:48:47.422  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : Starting CartItemIntegrationTest using Java 11.0.16.1 on LAPTOP-4RK3SJ4F with PID 5552 (started by SongSeyeon in C:\Github_projects\jwp-shopping-order)
+2023-06-04 19:48:47.422  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2023-06-04 19:48:48.206  INFO 5552 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-04 19:48:48.206  INFO 5552 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-04 19:48:48.206  INFO 5552 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-06-04 19:48:48.248  INFO 5552 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-04 19:48:48.248  INFO 5552 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 824 ms
+2023-06-04 19:48:48.556  INFO 5552 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2023-06-04 19:48:48.588  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2023-06-04 19:48:48.590  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2023-06-04 19:48:49.388  INFO 5552 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-04 19:48:49.472  INFO 5552 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59908 (http) with context path ''
+2023-06-04 19:48:49.476  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : Started CartItemIntegrationTest in 2.099 seconds (JVM running for 52.285)
+2023-06-04 19:48:49.497  INFO 5552 --- [o-auto-9-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 19:48:49.497  INFO 5552 --- [o-auto-9-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-04 19:48:49.498  INFO 5552 --- [o-auto-9-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-04 19:48:49.502 DEBUG 5552 --- [o-auto-9-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:49.502 DEBUG 5552 --- [o-auto-9-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:49.503 TRACE 5552 --- [o-auto-9-exec-1] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 75
+host: localhost:59908
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:49 GMT
+Location: /products/4
+
+
+
+
+2023-06-04 19:48:49.547 DEBUG 5552 --- [o-auto-9-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:49.547 DEBUG 5552 --- [o-auto-9-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:49.547 TRACE 5552 --- [o-auto-9-exec-2] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 73
+host: localhost:59908
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:49 GMT
+Location: /products/5
+
+
+
+
+2023-06-04 19:48:49.578 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:49.578 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE id = ?]
+2023-06-04 19:48:49.578 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:49.579 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:49.579 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE id = ?]
+2023-06-04 19:48:49.579 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [2], value class [java.lang.Long], SQL type unknown
+Request method:	POST
+Request URI:	http://localhost:59908/cart-items
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "productId": 4
+}
+2023-06-04 19:48:49.596 DEBUG 5552 --- [o-auto-9-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:49.596 DEBUG 5552 --- [o-auto-9-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:48:49.597 TRACE 5552 --- [o-auto-9-exec-3] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:48:49.599 DEBUG 5552 --- [o-auto-9-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:49.599 DEBUG 5552 --- [o-auto-9-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM product WHERE id = ?]
+2023-06-04 19:48:49.599 TRACE 5552 --- [o-auto-9-exec-3] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [4], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:49.600 DEBUG 5552 --- [o-auto-9-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:49.600 DEBUG 5552 --- [o-auto-9-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:49.600 TRACE 5552 --- [o-auto-9-exec-3] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /cart-items HTTP/1.1
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+content-type: application/json
+content-length: 15
+host: localhost:59908
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:49 GMT
+Location: /cart-items/4
+
+
+
+
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Location: /cart-items/4
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:49 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+2023-06-04 19:48:51.070  INFO 5552 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-04 19:48:51.070  INFO 5552 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-04 19:48:51.075  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2023-06-04 19:48:51.076  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.9)
+
+2023-06-04 19:48:51.115  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : Starting CartItemIntegrationTest using Java 11.0.16.1 on LAPTOP-4RK3SJ4F with PID 5552 (started by SongSeyeon in C:\Github_projects\jwp-shopping-order)
+2023-06-04 19:48:51.115  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2023-06-04 19:48:52.008  INFO 5552 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-04 19:48:52.009  INFO 5552 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-04 19:48:52.009  INFO 5552 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-06-04 19:48:52.086  INFO 5552 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-04 19:48:52.086  INFO 5552 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 969 ms
+2023-06-04 19:48:52.427  INFO 5552 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2023-06-04 19:48:52.447  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2023-06-04 19:48:52.448  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2023-06-04 19:48:53.103  INFO 5552 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-04 19:48:53.162  INFO 5552 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59921 (http) with context path ''
+2023-06-04 19:48:53.165  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : Started CartItemIntegrationTest in 2.086 seconds (JVM running for 55.973)
+2023-06-04 19:48:53.179  INFO 5552 --- [-auto-10-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 19:48:53.180  INFO 5552 --- [-auto-10-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-04 19:48:53.181  INFO 5552 --- [-auto-10-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-04 19:48:53.184 DEBUG 5552 --- [-auto-10-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:53.184 DEBUG 5552 --- [-auto-10-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:53.184 TRACE 5552 --- [-auto-10-exec-1] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 75
+host: localhost:59921
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:53 GMT
+Location: /products/4
+
+
+
+
+2023-06-04 19:48:53.213 DEBUG 5552 --- [-auto-10-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:53.213 DEBUG 5552 --- [-auto-10-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:53.214 TRACE 5552 --- [-auto-10-exec-2] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 73
+host: localhost:59921
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:53 GMT
+Location: /products/5
+
+
+
+
+2023-06-04 19:48:53.234 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:53.234 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE id = ?]
+2023-06-04 19:48:53.234 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:53.234 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:53.234 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE id = ?]
+2023-06-04 19:48:53.234 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [2], value class [java.lang.Long], SQL type unknown
+Request method:	POST
+Request URI:	http://localhost:59921/cart-items
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "productId": 4
+}
+2023-06-04 19:48:53.245 DEBUG 5552 --- [-auto-10-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:53.245 DEBUG 5552 --- [-auto-10-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:48:53.245 TRACE 5552 --- [-auto-10-exec-3] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:48:53.247 DEBUG 5552 --- [-auto-10-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:53.248 DEBUG 5552 --- [-auto-10-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM product WHERE id = ?]
+2023-06-04 19:48:53.248 TRACE 5552 --- [-auto-10-exec-3] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [4], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:53.248 DEBUG 5552 --- [-auto-10-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:53.248 DEBUG 5552 --- [-auto-10-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:53.249 TRACE 5552 --- [-auto-10-exec-3] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /cart-items HTTP/1.1
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+content-type: application/json
+content-length: 15
+host: localhost:59921
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:53 GMT
+Location: /cart-items/4
+
+
+
+
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Location: /cart-items/4
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:53 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Request method:	PATCH
+Request URI:	http://localhost:59921/cart-items/4
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "quantity": 10
+}
+2023-06-04 19:48:53.286 DEBUG 5552 --- [-auto-10-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:53.286 DEBUG 5552 --- [-auto-10-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:48:53.287 TRACE 5552 --- [-auto-10-exec-4] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:48:53.288 DEBUG 5552 --- [-auto-10-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:53.288 DEBUG 5552 --- [-auto-10-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT cart_item.id, cart_item.member_id, member.email, product.id, product.name, product.price, product.image_url, cart_item.quantity FROM cart_item INNER JOIN member ON cart_item.member_id = member.id INNER JOIN product ON cart_item.product_id = product.id WHERE cart_item.id = ?]
+2023-06-04 19:48:53.289 TRACE 5552 --- [-auto-10-exec-4] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [4], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:53.289 DEBUG 5552 --- [-auto-10-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2023-06-04 19:48:53.289 DEBUG 5552 --- [-auto-10-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [UPDATE cart_item SET quantity = ? WHERE id = ?]
+2023-06-04 19:48:53.289 TRACE 5552 --- [-auto-10-exec-4] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [10], value class [java.lang.Integer], SQL type unknown
+2023-06-04 19:48:53.289 TRACE 5552 --- [-auto-10-exec-4] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 2, parameter value [4], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:53.290 TRACE 5552 --- [-auto-10-exec-4] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows
+
+###### HTTP Request ######
+PATCH /cart-items/4 HTTP/1.1
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+content-type: application/json
+content-length: 15
+host: localhost:59921
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 200 OK
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:53 GMT
+
+
+
+
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:53 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Request method:	GET
+Request URI:	http://localhost:59921/cart-items
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2023-06-04 19:48:53.333 DEBUG 5552 --- [-auto-10-exec-8] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:53.333 DEBUG 5552 --- [-auto-10-exec-8] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:48:53.333 TRACE 5552 --- [-auto-10-exec-8] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:48:53.334 DEBUG 5552 --- [-auto-10-exec-8] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:53.334 DEBUG 5552 --- [-auto-10-exec-8] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT cart_item.id, cart_item.member_id, member.email, product.id, product.name, product.price, product.image_url, cart_item.quantity FROM cart_item INNER JOIN member ON cart_item.member_id = member.id INNER JOIN product ON cart_item.product_id = product.id WHERE cart_item.member_id = ?]
+2023-06-04 19:48:53.335 TRACE 5552 --- [-auto-10-exec-8] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type unknown
+
+###### HTTP Request ######
+GET /cart-items HTTP/1.1
+content-type: application/json
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+host: localhost:59921
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Date: Sun, 04 Jun 2023 10:48:53 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 04 Jun 2023 10:48:53 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+[
+    {
+        "id": 1,
+        "quantity": 2,
+        "product": {
+            "id": 1,
+            "name": "移섑궓",
+            "price": 10000,
+            "imageUrl": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
+        }
+    },
+    {
+        "id": 2,
+        "quantity": 4,
+        "product": {
+            "id": 2,
+            "name": "?깘?윭?뱶",
+            "price": 20000,
+            "imageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
+        }
+    },
+    {
+        "id": 4,
+        "quantity": 10,
+        "product": {
+            "id": 4,
+            "name": "치킨",
+            "price": 10000,
+            "imageUrl": "http://example.com/chicken.jpg"
+        }
+    }
+]
+2023-06-04 19:48:54.872  INFO 5552 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-04 19:48:54.872  INFO 5552 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-04 19:48:54.876  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2023-06-04 19:48:54.877  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.9)
+
+2023-06-04 19:48:54.915  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : Starting CartItemIntegrationTest using Java 11.0.16.1 on LAPTOP-4RK3SJ4F with PID 5552 (started by SongSeyeon in C:\Github_projects\jwp-shopping-order)
+2023-06-04 19:48:54.915  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2023-06-04 19:48:55.698  INFO 5552 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-04 19:48:55.698  INFO 5552 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-04 19:48:55.699  INFO 5552 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-06-04 19:48:55.751  INFO 5552 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-04 19:48:55.751  INFO 5552 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 834 ms
+2023-06-04 19:48:56.159  INFO 5552 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2023-06-04 19:48:56.179  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2023-06-04 19:48:56.180  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2023-06-04 19:48:56.830  INFO 5552 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-04 19:48:56.881  INFO 5552 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 60031 (http) with context path ''
+2023-06-04 19:48:56.884  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : Started CartItemIntegrationTest in 2.004 seconds (JVM running for 59.693)
+2023-06-04 19:48:56.901  INFO 5552 --- [-auto-11-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 19:48:56.901  INFO 5552 --- [-auto-11-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-04 19:48:56.902  INFO 5552 --- [-auto-11-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-04 19:48:56.905 DEBUG 5552 --- [-auto-11-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:56.905 DEBUG 5552 --- [-auto-11-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:56.905 TRACE 5552 --- [-auto-11-exec-1] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 75
+host: localhost:60031
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:56 GMT
+Location: /products/4
+
+
+
+
+2023-06-04 19:48:56.942 DEBUG 5552 --- [-auto-11-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:56.942 DEBUG 5552 --- [-auto-11-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:56.942 TRACE 5552 --- [-auto-11-exec-2] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 73
+host: localhost:60031
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:56 GMT
+Location: /products/5
+
+
+
+
+2023-06-04 19:48:56.973 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:56.973 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE id = ?]
+2023-06-04 19:48:56.974 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:56.974 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:56.974 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE id = ?]
+2023-06-04 19:48:56.974 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [2], value class [java.lang.Long], SQL type unknown
+Request method:	POST
+Request URI:	http://localhost:60031/cart-items
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "productId": 4
+}
+2023-06-04 19:48:56.988 DEBUG 5552 --- [-auto-11-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:56.988 DEBUG 5552 --- [-auto-11-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:48:56.988 TRACE 5552 --- [-auto-11-exec-3] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:48:56.990 DEBUG 5552 --- [-auto-11-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:56.990 DEBUG 5552 --- [-auto-11-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM product WHERE id = ?]
+2023-06-04 19:48:56.991 TRACE 5552 --- [-auto-11-exec-3] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [4], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:56.991 DEBUG 5552 --- [-auto-11-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:56.991 DEBUG 5552 --- [-auto-11-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:56.992 TRACE 5552 --- [-auto-11-exec-3] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /cart-items HTTP/1.1
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+content-type: application/json
+content-length: 15
+host: localhost:60031
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:56 GMT
+Location: /cart-items/4
+
+
+
+
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Location: /cart-items/4
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Request method:	POST
+Request URI:	http://localhost:60031/cart-items
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "productId": 5
+}
+2023-06-04 19:48:57.033 DEBUG 5552 --- [-auto-11-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:57.033 DEBUG 5552 --- [-auto-11-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:48:57.033 TRACE 5552 --- [-auto-11-exec-4] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:48:57.034 DEBUG 5552 --- [-auto-11-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:57.034 DEBUG 5552 --- [-auto-11-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM product WHERE id = ?]
+2023-06-04 19:48:57.034 TRACE 5552 --- [-auto-11-exec-4] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [5], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:48:57.034 DEBUG 5552 --- [-auto-11-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:48:57.034 DEBUG 5552 --- [-auto-11-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:48:57.035 TRACE 5552 --- [-auto-11-exec-4] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /cart-items HTTP/1.1
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+content-type: application/json
+content-length: 15
+host: localhost:60031
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:56 GMT
+Location: /cart-items/5
+
+
+
+
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Location: /cart-items/5
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:48:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Request method:	GET
+Request URI:	http://localhost:60031/cart-items
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2023-06-04 19:48:57.071 DEBUG 5552 --- [-auto-11-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:57.071 DEBUG 5552 --- [-auto-11-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:48:57.071 TRACE 5552 --- [-auto-11-exec-5] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:48:57.071 DEBUG 5552 --- [-auto-11-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:48:57.071 DEBUG 5552 --- [-auto-11-exec-5] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT cart_item.id, cart_item.member_id, member.email, product.id, product.name, product.price, product.image_url, cart_item.quantity FROM cart_item INNER JOIN member ON cart_item.member_id = member.id INNER JOIN product ON cart_item.product_id = product.id WHERE cart_item.member_id = ?]
+2023-06-04 19:48:57.072 TRACE 5552 --- [-auto-11-exec-5] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type unknown
+
+###### HTTP Request ######
+GET /cart-items HTTP/1.1
+content-type: application/json
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+host: localhost:60031
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Date: Sun, 04 Jun 2023 10:48:56 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 04 Jun 2023 10:48:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+[
+    {
+        "id": 1,
+        "quantity": 2,
+        "product": {
+            "id": 1,
+            "name": "移섑궓",
+            "price": 10000,
+            "imageUrl": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
+        }
+    },
+    {
+        "id": 2,
+        "quantity": 4,
+        "product": {
+            "id": 2,
+            "name": "?깘?윭?뱶",
+            "price": 20000,
+            "imageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
+        }
+    },
+    {
+        "id": 4,
+        "quantity": 1,
+        "product": {
+            "id": 4,
+            "name": "치킨",
+            "price": 10000,
+            "imageUrl": "http://example.com/chicken.jpg"
+        }
+    },
+    {
+        "id": 5,
+        "quantity": 1,
+        "product": {
+            "id": 5,
+            "name": "피자",
+            "price": 15000,
+            "imageUrl": "http://example.com/pizza.jpg"
+        }
+    }
+]
+2023-06-04 19:48:58.506  INFO 5552 --- [    Test worker] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-04 19:48:58.506  INFO 5552 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-04 19:48:58.511  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2023-06-04 19:48:58.512  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.9)
+
+2023-06-04 19:48:58.546  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : Starting CartItemIntegrationTest using Java 11.0.16.1 on LAPTOP-4RK3SJ4F with PID 5552 (started by SongSeyeon in C:\Github_projects\jwp-shopping-order)
+2023-06-04 19:48:58.546  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2023-06-04 19:48:59.067  INFO 5552 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-06-04 19:48:59.067  INFO 5552 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-04 19:48:59.067  INFO 5552 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-06-04 19:48:59.106  INFO 5552 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-04 19:48:59.106  INFO 5552 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 558 ms
+2023-06-04 19:48:59.367  INFO 5552 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2023-06-04 19:48:59.382  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2023-06-04 19:48:59.383  INFO 5552 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2023-06-04 19:49:00.022  INFO 5552 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-04 19:49:00.084  INFO 5552 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 60045 (http) with context path ''
+2023-06-04 19:49:00.087  INFO 5552 --- [    Test worker] c.integration.CartItemIntegrationTest    : Started CartItemIntegrationTest in 1.573 seconds (JVM running for 62.896)
+2023-06-04 19:49:00.103  INFO 5552 --- [-auto-12-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 19:49:00.104  INFO 5552 --- [-auto-12-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-04 19:49:00.105  INFO 5552 --- [-auto-12-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-04 19:49:00.108 DEBUG 5552 --- [-auto-12-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:49:00.108 DEBUG 5552 --- [-auto-12-exec-1] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:49:00.108 TRACE 5552 --- [-auto-12-exec-1] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 75
+host: localhost:60045
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:49:00 GMT
+Location: /products/4
+
+
+
+
+2023-06-04 19:49:00.140 DEBUG 5552 --- [-auto-12-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:49:00.140 DEBUG 5552 --- [-auto-12-exec-3] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:49:00.141 TRACE 5552 --- [-auto-12-exec-3] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /products HTTP/1.1
+accept: */*
+content-type: application/json
+content-length: 73
+host: localhost:60045
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:49:00 GMT
+Location: /products/5
+
+
+
+
+2023-06-04 19:49:00.167 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:49:00.167 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE id = ?]
+2023-06-04 19:49:00.167 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:49:00.168 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:49:00.168 DEBUG 5552 --- [    Test worker] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE id = ?]
+2023-06-04 19:49:00.168 TRACE 5552 --- [    Test worker] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [2], value class [java.lang.Long], SQL type unknown
+Request method:	POST
+Request URI:	http://localhost:60045/cart-items
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "productId": 4
+}
+2023-06-04 19:49:00.182 DEBUG 5552 --- [-auto-12-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:49:00.182 DEBUG 5552 --- [-auto-12-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:49:00.182 TRACE 5552 --- [-auto-12-exec-2] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:49:00.184 DEBUG 5552 --- [-auto-12-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:49:00.184 DEBUG 5552 --- [-auto-12-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM product WHERE id = ?]
+2023-06-04 19:49:00.185 TRACE 5552 --- [-auto-12-exec-2] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [4], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:49:00.185 DEBUG 5552 --- [-auto-12-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing SQL update and returning generated keys
+2023-06-04 19:49:00.185 DEBUG 5552 --- [-auto-12-exec-2] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement
+2023-06-04 19:49:00.185 TRACE 5552 --- [-auto-12-exec-2] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows and returned 1 keys
+
+###### HTTP Request ######
+POST /cart-items HTTP/1.1
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+content-type: application/json
+content-length: 15
+host: localhost:60045
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:49:00 GMT
+Location: /cart-items/4
+
+
+
+
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Location: /cart-items/4
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:49:00 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Request method:	PATCH
+Request URI:	http://localhost:60045/cart-items/4
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "quantity": 0
+}
+2023-06-04 19:49:00.227 DEBUG 5552 --- [-auto-12-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:49:00.227 DEBUG 5552 --- [-auto-12-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:49:00.227 TRACE 5552 --- [-auto-12-exec-4] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:49:00.229 DEBUG 5552 --- [-auto-12-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:49:00.229 DEBUG 5552 --- [-auto-12-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT cart_item.id, cart_item.member_id, member.email, product.id, product.name, product.price, product.image_url, cart_item.quantity FROM cart_item INNER JOIN member ON cart_item.member_id = member.id INNER JOIN product ON cart_item.product_id = product.id WHERE cart_item.id = ?]
+2023-06-04 19:49:00.230 TRACE 5552 --- [-auto-12-exec-4] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [4], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:49:00.230 DEBUG 5552 --- [-auto-12-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL update
+2023-06-04 19:49:00.230 DEBUG 5552 --- [-auto-12-exec-4] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [DELETE FROM cart_item WHERE id = ?]
+2023-06-04 19:49:00.230 TRACE 5552 --- [-auto-12-exec-4] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [4], value class [java.lang.Long], SQL type unknown
+2023-06-04 19:49:00.231 TRACE 5552 --- [-auto-12-exec-4] o.s.jdbc.core.JdbcTemplate               : SQL update affected 1 rows
+
+###### HTTP Request ######
+PATCH /cart-items/4 HTTP/1.1
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+content-type: application/json
+content-length: 14
+host: localhost:60045
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 200 OK
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:49:00 GMT
+
+
+
+
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Length: 0
+Date: Sun, 04 Jun 2023 10:49:00 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Request method:	GET
+Request URI:	http://localhost:60045/cart-items
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic YUBhLmNvbToxMjM0
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2023-06-04 19:49:00.270 DEBUG 5552 --- [-auto-12-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:49:00.270 DEBUG 5552 --- [-auto-12-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT * FROM member WHERE email = ?]
+2023-06-04 19:49:00.270 TRACE 5552 --- [-auto-12-exec-7] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [a@a.com], value class [java.lang.String], SQL type unknown
+2023-06-04 19:49:00.271 DEBUG 5552 --- [-auto-12-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL query
+2023-06-04 19:49:00.271 DEBUG 5552 --- [-auto-12-exec-7] o.s.jdbc.core.JdbcTemplate               : Executing prepared SQL statement [SELECT cart_item.id, cart_item.member_id, member.email, product.id, product.name, product.price, product.image_url, cart_item.quantity FROM cart_item INNER JOIN member ON cart_item.member_id = member.id INNER JOIN product ON cart_item.product_id = product.id WHERE cart_item.member_id = ?]
+2023-06-04 19:49:00.271 TRACE 5552 --- [-auto-12-exec-7] o.s.jdbc.core.StatementCreatorUtils      : Setting SQL statement parameter value: column index 1, parameter value [1], value class [java.lang.Long], SQL type unknown
+
+###### HTTP Request ######
+GET /cart-items HTTP/1.1
+content-type: application/json
+authorization: Basic YUBhLmNvbToxMjM0
+accept: */*
+host: localhost:60045
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.14 (Java/11.0.16.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response
+        ######
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Date: Sun, 04 Jun 2023 10:49:00 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 04 Jun 2023 10:49:00 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+[
+    {
+        "id": 1,
+        "quantity": 2,
+        "product": {
+            "id": 1,
+            "name": "移섑궓",
+            "price": 10000,
+            "imageUrl": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
+        }
+    },
+    {
+        "id": 2,
+        "quantity": 4,
+        "product": {
+            "id": 2,
+            "name": "?깘?윭?뱶",
+            "price": 20000,
+            "imageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
+        }
+    }
+]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cart.domain.PaymentTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-06-04T10:48:36" hostname="LAPTOP-4RK3SJ4F" time="0.008">
+  <properties/>
+  <testcase name="Order를 인자로 받아 PaymentRecord를 생성한다." classname="cart.domain.PaymentTest" time="0.004"/>
+  <testcase name="적용대상이 아닌 주문은 할인하지 않는다." classname="cart.domain.PaymentTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

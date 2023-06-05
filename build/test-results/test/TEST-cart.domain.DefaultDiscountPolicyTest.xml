@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cart.domain.DefaultDiscountPolicyTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-06-04T10:48:36" hostname="LAPTOP-4RK3SJ4F" time="0.003">
+  <properties/>
+  <testcase name="Order 객체를 받았을 때 정책이 해당 주문에 적용될 수 있으면 true를 반환한다." classname="cart.domain.DefaultDiscountPolicyTest" time="0.002"/>
+  <testcase name="Order 객체를 받았을 때 정책이 해당 주문에 적용될 수 없으면 false를 반환한다." classname="cart.domain.DefaultDiscountPolicyTest" time="0.0"/>
+  <testcase name="caculateDiscountAmount()를 호출하면 할인금액을 계산한다." classname="cart.domain.DefaultDiscountPolicyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

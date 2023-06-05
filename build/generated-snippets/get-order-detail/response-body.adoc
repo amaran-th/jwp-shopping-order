@@ -1,0 +1,33 @@
+[source,options="nowrap"]
+----
+{
+  "productList" : [ {
+    "name" : "移섑궓",
+    "quantity" : 1,
+    "imageUrl" : "http://example.com/chicken.jpg",
+    "totalPrice" : 10000
+  }, {
+    "name" : "�뵾�옄",
+    "quantity" : 2,
+    "imageUrl" : "http://example.com/pizza.jpg",
+    "totalPrice" : 30000
+  }, {
+    "name" : "蹂댁뙂",
+    "quantity" : 1,
+    "imageUrl" : "http://example.com/pizza.jpg",
+    "totalPrice" : 15000
+  } ],
+  "id" : 1,
+  "orderTime" : "2023-06-04T19:48:20.313727",
+  "paymentAmount" : {
+    "originalPrice" : 55000,
+    "discounts" : [ {
+      "discountPolicy" : "5筌띾슣�뜚 占쎌뵠占쎄맒 �뤃�됤꼻 占쎈뻻 10% 占쎈막占쎌뵥",
+      "discountAmount" : 5500
+    } ],
+    "discountedPrice" : 49500,
+    "deliveryFee" : 3500,
+    "finalPrice" : 53000
+  }
+}
+----
