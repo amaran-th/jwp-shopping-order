@@ -22,6 +22,8 @@ jobs:
       - name: Stash changes
         run: |
           ls build/libs
+          git remote update
+          git fetch
           git stash push -- "build/libs"
 
       - name: Checkout Repository
