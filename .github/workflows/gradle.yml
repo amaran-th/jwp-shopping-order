@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: deploy
         run: |
-          chmod +x ~/build_deploy.sh
-          sudo ~/build_deploy.sh
+          chmod +x ~/deploy.sh
+          sudo ~/deploy.sh
