@@ -5,8 +5,15 @@ on:
 jobs:
   deploy:
     runs-on: self-hosted
+    defaults:
+      run:
+        working-directory: ../..
     steps:
+      - name : change permission
+        run: |
+          sudo chown -R ubuntu:ubuntu /home/ubuntu/actions-runner/_work/jwp-shopping-order
+
       - name: deploy
         run: |
-          chmod +x ~/deploy.sh
-          sudo ~/deploy.sh
+          chmod +x ~/build_deploy.sh
+          sudo ~/build_deploy.sh
